@@ -1,0 +1,30 @@
+---
+import type { Code, Debug } from 'astro:components'
+import WorkCard from './WorkCard.astro'
+
+interface IProject {
+    title: string;
+    role: string;
+    description: string;
+}
+
+const projects: IProject[] = [
+    {
+        title: "Monteflor",
+        role: "Developer",
+        description: "Monteflor is a florist based in Tegucigalpa, specialized in making floral arrangements and their prompt delivery within the metropolitan area of ​​the city. Currently, it collaborates closely with Monteflor in the development of its application for purchasing and delivering floral arrangements, as well as in the development and maintenance of the administrative panel and the server."
+    }
+]
+---
+<div>
+    <p class="text-3xl my-6">Recent work!</p>
+
+    <div class="flex flex-row items-center justify-evenly">
+        {
+            projects.map((project: IProject) => (
+            <WorkCard {...project} />
+            ))
+        }
+    
+    </div>
+</div>

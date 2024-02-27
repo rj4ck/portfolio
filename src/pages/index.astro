@@ -1,11 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Summary from '../components/Summary.astro';
+import RecentWork from '../components/RecentWork.astro';
+import GetInTouch from '../components/GetInTouch.astro';
 ---
 
 <Layout title="Raquel Jackson">
-	<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-		<Summary />
-		<div class="h-screen bg-gray-200 lg:col-span-2"></div>
-	</div>
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+        <Summary class="lg:col-span-1" />
+
+        <div class="lg:col-span-2 overflow-auto bg-gray-200 p-8 grid grid-cols-1 divide-y-2 text-gray-400">
+            <RecentWork />
+            <GetInTouch />
+        </div>
+    </div>
 </Layout>
