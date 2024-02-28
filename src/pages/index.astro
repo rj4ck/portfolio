@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Summary from '../components/Summary.astro';
+import Section from '../components/Sections.astro';
 import RecentWork from '../components/RecentWork.astro';
-import GetInTouch from '../components/GetInTouch.astro';
 ---
 
 <Layout title="Raquel Jackson">
@@ -10,8 +10,9 @@ import GetInTouch from '../components/GetInTouch.astro';
         <Summary class="lg:col-span-1" />
 
         <div class="lg:col-span-2 overflow-auto bg-gray-200 p-8 grid grid-cols-1 divide-y-2 text-gray-400">
-            <RecentWork />
-            <GetInTouch />
+            <Section title="Recent works!">
+                <RecentWork />
+            </Section>
         </div>
     </div>
 </Layout>
