@@ -1,6 +1,6 @@
 ---
 title: "Poke-Qwik"
-pubDate: 2024-03-26
+createdDate: 2024-03-26
 description: "This initiative served as an opportunity to explore and become acquainted with Qwik's capabilities, leveraging the advantages of ExpressJS for agile and efficient implementation. Additionally, by utilizing Railway as the hosting platform, a robust and scalable development environment was ensured for the project."
 image:
 tags: ["QwikJS", "ExpressJS", "Railway"]

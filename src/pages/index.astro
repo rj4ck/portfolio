@@ -3,8 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Summary from '../components/Summary.astro';
 import Section from '../components/Sections.astro';
 import WorkCard from "../components/WorkCard.astro";
+import Skills from "../components/Skills"
 
-const recentProjects = await Astro.glob("../recent-projects/*.md")
+const technicalSkills = await Astro.glob("../content/skills/*.md")
+const recentProjects = await Astro.glob("../content/recent-projects/*.md")
 ---
 
 <Layout title="Raquel Jackson">
@@ -12,6 +14,17 @@ const recentProjects = await Astro.glob("../recent-projects/*.md")
         <Summary class="lg:col-span-1" />
 
         <div class="lg:col-span-2 overflow-auto bg-gray-200 p-8 grid grid-cols-1 divide-y-2 text-gray-400">
+            <Section title="Technical skills">
+                <div class="max-w-screen-xl">
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
+                        {technicalSkills.map(skill => (
+                          <Skills title={skill.frontmatter.title} skills={skill.frontmatter.skills} />
+                        ))}
+                    </div>
+                </div>
+
+            </Section>
+
             <Section title="Recent works!">
 
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -22,28 +35,8 @@ const recentProjects = await Astro.glob("../recent-projects/*.md")
 
             </Section>
 
-            <Section title="Skills">
 
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <ul>
-                        <li>TypeScript</li>
-                        <li>ExpressJS</li>
-                        <li>NestJS</li>
-                        <li>MongoDB</li>
-                        <li>GraphQL</li>
-                        <li>ReactJS/Native</li>
-                        <li>Flutter</li>
-                        <li>AstroJS</li>
-                        <li>QwikJS</li>
-                    </ul>
 
-                    <ul>
-                        <li>AWS</li>
-                        <li>Firebase</li>
-                    </ul>
-                </div>
-
-            </Section>
         </div>
     </div>
 </Layout>
