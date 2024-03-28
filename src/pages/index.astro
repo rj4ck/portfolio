@@ -1,42 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Summary from '../components/Summary.astro';
 import Section from '../components/Sections.astro';
 import WorkCard from "../components/WorkCard.astro";
-import Skills from "../components/Skills"
+import TechnicalSkills from "../components/TechnicalSkills"
+import Hero from "../components/Hero.astro";
+import SocialMedia from "../components/SocialMedia";
+import RecentWorks from "../components/RecentWorks"
 
-const technicalSkills = await Astro.glob("../content/skills/*.md")
+const technicalSkills = await Astro.glob("../content/technicalSkills/*.md")
 const recentProjects = await Astro.glob("../content/recent-projects/*.md")
 ---
 
 <Layout>
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-        <Summary class="lg:col-span-1" />
+    <div class="">
+        <header class="bg-gray-900 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-[30rem] lg:items-center lg:overflow-hidden xl:w-[30rem] text-white flex-col justify-between p-6">
+            <Hero />
 
-        <div class="lg:col-span-2 overflow-auto bg-gray-200 p-8 grid grid-cols-1 divide-y-2 text-gray-400">
+            <SocialMedia />
+        </header>
+
+        <main class="lg:ml-[30rem] overflow-auto p-8">
             <Section title="Technical skills">
                 <div class="max-w-screen-xl">
                     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
                         {technicalSkills.map(skill => (
-                          <Skills title={skill.frontmatter.title} skills={skill.frontmatter.skills} />
+                          <TechnicalSkills title={skill.frontmatter.title} skills={skill.frontmatter.skills} />
                         ))}
                     </div>
                 </div>
-
             </Section>
 
-            <Section title="Recent works!">
+            <Section title="Personal projects">
 
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
                     {recentProjects.map(project => (
-                      <WorkCard links={project?.frontmatter?.links} title={project?.frontmatter?.title} tags={project?.frontmatter?.tags} description={project?.frontmatter?.description} />
+                      <WorkCard image={project?.frontmatter?.image} links={project?.frontmatter?.links} title={project?.frontmatter?.title} tags={project?.frontmatter?.tags} description={project?.frontmatter?.description} />
                     ))}
                 </div>
+            </Section>
 
+            <Section title="Recent works">
+
+                <RecentWorks />
             </Section>
 
 
 
-        </div>
+        </main>
     </div>
 </Layout>

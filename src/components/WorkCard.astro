@@ -1,5 +1,5 @@
 ---
-import { Image, getImage } from 'astro:assets';
+import DevIcon from "./icons/DevIcon";
 
 interface Links {
     url: string;
@@ -8,36 +8,39 @@ interface Links {
 interface Props {
     role: string;
     title: string;
+    image: string;
     tags: string[];
-    links: Links[];
+    links?: Links[];
     description: string;
 }
 
-const { role, tags, title, links, description } = Astro.props;
+const { role, image, tags, title, links, description } = Astro.props;
 ---
-<div class="shrink-0 bg-gray-800 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-orange-500/50 hover:shadow-orange-500/50">
-    <div>
-        <p class="text-sm font-medium uppercase tracking-widest text-orange-500">{role}</p>
-        <p class="text-xl font-bold text-white sm:text-2xl">{title}</p>
+<div class="rounded-md border-[0.05rem] group relative block bg-white hover:bg-gray-800 hover:text-white hover:cursor-pointer shadow-md transition hover:border-orange-500/50 hover:shadow-orange-500/50">
+    <div class="flex items-start gap-4 p-3 sm:p-5 lg:p-7">
+        <a href="#" class="block shrink-0">
+            <DevIcon />
+        </a>
 
-        <p class="mt-1 text-sm text-gray-300">
-            {description}
-        </p>
-    </div>
+        <div>
+            <h3 class="font-medium sm:text-lg">
+                <a href="#" class="hover:underline"> {title} </a>
+            </h3>
 
-    <div class="mt-1">
-        {links && links.map((link: Links) => (
-          <a role="button" href={link.url} target="_blank" class="text-[13px] no-underline hover:underline mr-2">
-              {link.name}
-          </a>
-        ))}
+            <p class="text-sm my-1">
+                {description}
+            </p>
 
-        <br />
+            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                <p class="line-clamp-2 text-sm mt-2">
+                    {links && links.map((link: Links) => (
+                      <a role="button" href={link.url} target="_blank" class="text-[0.7rem] no-underline hover:underline mr-2">
+                          {link.name}
+                      </a>
+                    ))}
+                </p>
+            </div>
 
-        {tags.map((tag: string) => (
-            <span class="inline-flex text-[10px] ml-1 items-center justify-center rounded-full bg-orange-100 px-1.5 py-0.5 text-orange-700">
-                {tag}
-            </span>
-        ))}
+        </div>
     </div>
 </div>

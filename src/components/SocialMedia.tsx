@@ -20,7 +20,7 @@ const SocialMedia = () => {
   ];
 
   return (
-    <div className="justify-self-end">
+    <div className="flex justify-center ">
       {SOCIAL_MEDIA_LINKS.map((media) => (
         <a href={media.url} target="_blank" className="text-[1.2rem] hover:text-orange-500 mx-2">
           <i className={`fa-brands fa-${media.icon}`}></i>
