@@ -1,61 +1,75 @@
 ---
-import { Image, getImage } from 'astro:assets';
+import { Image, getImage } from "astro:assets";
 
-import avatarImage from '../images/avatar.jpg';
+import avatarImage from "../images/avatar.jpg";
 
-const optimizedAvatar = await getImage({src: avatarImage, format: 'webp'})
-
+const optimizedAvatar = await getImage({ src: avatarImage, format: "webp" });
 ---
 
-<div class="text-center">
+<div class="container mx-auto px-4 py-8 text-center">
+  <div class="mb-8">
     <p class="text-4xl">Hi there! 👋</p>
-    
-        <div class="overflow-hidden">
-            <Image class="inline-block m-4 h-40 w-40 rounded-full ring-2 ring-[#FFA500]" width="1600"
-            height="900"
-            loading="lazy"
-            decoding="async" alt={"Avatar"} src={optimizedAvatar.src}/>
-        </div>
-    
-        <p class="text-4xl">
-            My name is
-            <span class="animated-gradient">Raquel Jackson</span>
-        </p>
-    
-        <p class="text-base text-gray-300 my-4">I&apos;m a fullstack developer specialized in JavaScript. I am passionate about the world of development and I am constantly looking for new projects that allow me to learn and improve my technical skills. </p>
-        <p class="text-base text-gray-300">Outside of work, I enjoy spending time with my friends and exploring new places.</p>
-    
-        <br />
 
-        <div class="grid grid-flow-col justify-stretch">
-            <a href="https://www.buymeacoffee.com/rj4ck" target="_blank" class="inline-block">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 3.15em !important;width: 10em !important;" />
-            </a>
-    
-            <a href="https://drive.google.com/file/d/13LlQsO6dLMBDB4zBx_yPkMa_ndK2seMB/view?usp=drive_link" target="_blank" class="inline-block rounded border border-orange-600 px-12 py-3 text-sm font-medium text-orange-600 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring active:bg-orange-500" >
-                Curriculum
-            </a>
-        </div>
+    <div class="overflow-hidden mx-auto my-4">
+      <Image class="inline-block m-4 h-40 w-40 rounded-full ring-2 ring-[#FFA500]" width="1600"
+             height="900"
+             loading="lazy"
+             decoding="async" alt={"Avatar"} src={optimizedAvatar.src} />
+    </div>
+
+    <p class="text-4xl">
+      My name is <span class="animated-gradient">Raquel Jackson</span>
+    </p>
+  </div>
+
+  <div class="mb-8 mx-auto max-w-lg">
+    <p class="text-base text-gray-300 my-4">
+      I&apos;m a fullstack developer specialized in JavaScript. I am passionate about the world of development and I am
+      constantly looking for new projects that allow me to learn and improve my technical skills.
+    </p>
+
+    <p class="text-base text-gray-300 mb-4">
+      Outside of work, I enjoy spending time with my friends and exploring new places.
+    </p>
+  </div>
+
+
+  <div class="grid grid-flow-col gap-4 justify-center">
+    <a href="https://www.buymeacoffee.com/rj4ck" target="_blank" class="inline-block">
+      <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+           style="height: 3.15em !important;width: 10em !important;" />
+    </a>
+
+    <a href="https://drive.google.com/file/d/13LlQsO6dLMBDB4zBx_yPkMa_ndK2seMB/view?usp=drive_link" target="_blank"
+       class="inline-block rounded border border-orange-600 px-12 py-3 text-sm font-medium text-orange-600 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring active:bg-orange-500">
+      Curriculum
+    </a>
+  </div>
 </div>
 
 <style>
 
-@keyframes changeGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+    @keyframes changeGradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 
-.animated-gradient {
-    background: linear-gradient(45deg, #008080, #00ced1, #ffa500, #8b4513);
-    background-size: 400% 400%;
-    animation: changeGradient 10s ease infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    .animated-gradient {
+        background: linear-gradient(45deg, #008080, #00ced1, #ffa500, #8b4513);
+        background-size: 400% 400%;
+        animation: changeGradient 10s ease infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-.image-container {
-    background-color: linear-gradient(to right, var(--turquoise), var(--orange))
-    4;
-}
+    .image-container {
+        background-color: linear-gradient(to right, var(--turquoise), var(--orange)) 4;
+    }
 </style>
