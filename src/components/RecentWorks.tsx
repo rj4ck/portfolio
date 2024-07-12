@@ -4,17 +4,23 @@ import ClinpaysIcon from "./icons/ClinpaysIcon.tsx";
 import ProjectList from "./ProjectList.tsx";
 import TimeLine from "./TimeLine.tsx";
 
-const RecentWorks = () => {
+interface Props {
+	showTimeline?: boolean;
+}
+
+const RecentWorks: React.FC<Props> = ({ showTimeline }) => {
 	return (
-		<div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
-			<TimeLine date={'Feb 1, 2022'} title={"Code ÉXITOS"} subtitle={"Software developer"} icon={<CodexIcon />}>
+		<div className={`space-y-8 relative ${!showTimeline ? "" : "before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"}`}>
+			<TimeLine showTimeline={showTimeline} startDate={"02/2022"} endDate={"01/2024"} location={"San Pedro Sula, Honduras"} date={'Feb 1, 2022'} title={"Code ÉXITOS"} subtitle={"Software developer"} icon={<CodexIcon />}>
 				<ProjectList
+					showTimeline={showTimeline}
 					title={"Frontend development"}
 					tags={["ReactJS", "React Native", "VueJS"]}
 					details={[
 						"Led the development of interactive and efficient user interfaces using React Native, ReactJS and VueJS, ensuring a fluid and engaging user experience."
 					]} />
 				<ProjectList
+					showTimeline={showTimeline}
 					title={"Backend development"}
 					tags={["NestJS", "GraphQL", "Flesk", "Python", "AWS", "Lambda", "API Gateway"]}
 					details={[
@@ -22,6 +28,7 @@ const RecentWorks = () => {
 						"Implemented robust and scalable backend solutions using microservers with AWS Lambda and API Gateway, leveraging cloud infrastructure for efficiency and scalability.", "Developed and maintained servers using Python, taking advantage of its versatility and effectiveness in implementing business logic.", "Contributed to the development of services using NestJS, ensuring a robust and modular architecture for backend applications."
 					]} />
 				<ProjectList
+					showTimeline={showTimeline}
 					title={"Project Collaboration"}
 					details={[
 						"Implemented development best practices to ensure application optimization and performance, improving efficiency and user experience.",
@@ -30,8 +37,9 @@ const RecentWorks = () => {
 			</TimeLine>
 
 
-			<TimeLine date={'Nov 14, 2014'} title={"Clinpays"} subtitle={"Software developer"} icon={<ClinpaysIcon />}>
+			<TimeLine showTimeline={showTimeline} startDate={"11/2014"} endDate={"02/2024"} location={"San Pedro Sula, Honduras"} date={'Nov 14, 2014'} title={"Clinpays"} subtitle={"Lead Developer"} icon={<ClinpaysIcon />}>
 				<ProjectList
+					showTimeline={showTimeline}
 					title={"Development and Maintenance Management"}
 					tags={["strategic", "coordination", "maintenance"]}
 					details={[
@@ -39,6 +47,7 @@ const RecentWorks = () => {
 						"Implementation and monitoring of preventive and corrective maintenance to guarantee the stability and efficiency of the systems."
 					]} />
 				<ProjectList
+					showTimeline={showTimeline}
 					title={"Server Management"}
 					tags={["servers"]}
 					details={[
@@ -46,12 +55,14 @@ const RecentWorks = () => {
 						"Implementation of security and optimization measures to ensure a robust and reliable server environment."
 					]} />
 				<ProjectList
+					showTimeline={showTimeline}
 					title={"Frontend development"}
 					tags={["design", "implementation"]}
 					details={[
 						"Active collaboration as part of the payments API development team, contributing to the design, implementation and continuous improvement of this essential interface.",
 					]} />
 				<ProjectList
+					showTimeline={showTimeline}
 					title={"Backend development"}
 					tags={["connections", "API", "orchestrator", "implementation"]}
 					details={[
