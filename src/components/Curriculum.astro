@@ -1,0 +1,98 @@
+---
+import { useEffect } from 'react';
+import html2pdf from 'html2pdf.js';
+---
+
+<html>
+<head>
+    <title>Raquel Jackson - CV</title>
+    <style>
+        /* Include your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #007acc;
+        }
+        h2 {
+            margin-top: 20px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+        }
+        .contact, .summary, .skills, .experience, .education, .languages {
+            margin-top: 20px;
+        }
+        .contact p, .languages p {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .skills span, .languages span {
+            display: inline-block;
+            background: #007acc;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+        .experience-item h3, .education-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        .experience-item p, .education-item p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .languages span {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="cv-content">
+    <header>
+        <h1>Raquel Jackson</h1>
+        <p>Full Stack Developer</p>
+        <div class="contact">
+            <p>📞 (+504) 9715-7277</p>
+            <p>📧 r.jackson@msn.com</p>
+            <p>🌐 <a href="http://linkedin.com/in/raquel-jackson" target="_blank">http://linkedin.com/in/raquel-jackson</a></p>
+            <p>🌐 <a href="https://github.com/rj4ck" target="_blank">https://github.com/rj4ck</a></p>
+            <p>📍 San Pedro Sula, Honduras</p>
+        </div>
+    </header>
+</div>
+
+<button id="descargar-pdf">Descargar como PDF</button>
+
+<script type="module">
+    import html2pdf from 'html2pdf.js';
+
+    function descargarPDF() {
+        const elemento = document.getElementById('contenido-para-pdf');
+        html2pdf().from(elemento).save('archivo-descargado.pdf');
+    }
+
+    document.getElementById('descargar-pdf').addEventListener('click', descargarPDF);
+</script>
+</body>
+</html>
