@@ -5,7 +5,8 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://rj4ck.github.io/portfolio',
+  site: 'https://rj4ck.github.io',
+  base: '/portfolio/',
   integrations: [
     react(),
     tailwind(),
