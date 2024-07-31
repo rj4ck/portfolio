@@ -2,6 +2,7 @@
   "name": "rj4ck-portfolio",
   "type": "module",
   "version": "0.0.1",
+  "author": "Raquel Jackson",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
