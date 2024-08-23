@@ -1,20 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Section from '../components/Sections.astro';
-import WorkCard from "../components/WorkCard.astro";
-import TechnicalSkills from "../components/TechnicalSkills"
-import Hero from "../components/Hero.astro";
-import SocialMedia from "../components/SocialMedia";
-import RecentWorks from "../components/RecentWorks"
+import Layout from '../../layouts/Layout.astro';
+import Section from '../../components/Sections.astro';
+import WorkCard from "../../components/WorkCard.astro";
+import TechnicalSkills from "../../components/TechnicalSkills"
+import Hero from "../../components/Hero.astro";
+import SocialMedia from "../../components/SocialMedia";
+import RecentWorks from "../../components/RecentWorks"
 
-const technicalSkills = await Astro.glob("../content/technicalSkills/*.md")
-const recentProjects = await Astro.glob("../content/recent-projects/*.md")
+const technicalSkills = await Astro.glob("../../content/technicalSkills/*.md")
+const recentProjects = await Astro.glob("../../content/recent-projects/*.md")
 
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } }
+  ];
+}
 ---
 
 <Layout>
@@ -46,12 +47,8 @@ const t = useTranslations(lang);
             </Section>
 
             <Section title="Recent works">
-
                 <RecentWorks />
             </Section>
-
-
-
         </main>
     </div>
 </Layout>
