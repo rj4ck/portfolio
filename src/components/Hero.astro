@@ -4,11 +4,18 @@ import { Image, getImage } from "astro:assets";
 import avatarImage from "../images/avatar.jpg";
 
 const optimizedAvatar = await getImage({ src: avatarImage, format: "webp" });
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="container mx-auto text-center">
   <div class="mb-8">
-    <p class="text-4xl">Hi there! 👋</p>
+    <p class="text-4xl">
+      {t('HERO.MY_GREETING')}
+    </p>
 
     <div class="overflow-hidden mx-auto my-4">
       <Image class="inline-block m-4 h-40 w-40 rounded-full ring-2 ring-[#FFA500]" width="1600"
@@ -18,18 +25,17 @@ const optimizedAvatar = await getImage({ src: avatarImage, format: "webp" });
     </div>
 
     <p class="text-4xl">
-      My name is <span class="animated-gradient">Raquel Jackson</span>
+      {t('HERO.MY_NAME')} <span class="animated-gradient">Raquel Jackson</span>
     </p>
   </div>
 
   <div class="mb-8 mx-auto max-w-lg">
     <p class="text-base text-gray-300 my-4">
-      I&apos;m a fullstack developer specialized in JavaScript. I am passionate about the world of development and I am
-      constantly looking for new projects that allow me to learn and improve my technical skills.
+      {t('HERO.MY_RESUME')}
     </p>
 
     <p class="text-base text-gray-300 mb-4">
-      Outside of work, I enjoy spending time with my friends and exploring new places.
+      {t('HERO.MY_HOBBY')}
     </p>
   </div>
 

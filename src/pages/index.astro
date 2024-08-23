@@ -9,6 +9,12 @@ import RecentWorks from "../components/RecentWorks"
 
 const technicalSkills = await Astro.glob("../content/technicalSkills/*.md")
 const recentProjects = await Astro.glob("../content/recent-projects/*.md")
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 
 <Layout>
