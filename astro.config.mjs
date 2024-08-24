@@ -11,15 +11,9 @@ export default defineConfig({
     '/:lang',
     '/:lang/curriculum',
   ],
-  redirects: {
-    '': '/portfolio/en'
-  },
   i18n: {
     defaultLocale: "en",
     locales: ["es", "en"],
-    routing: {
-      prefixDefaultLocale: false
-    }
   },
   integrations: [
     react(),
