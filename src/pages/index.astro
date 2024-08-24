@@ -1,10 +1,10 @@
 ---
 export async function get({ redirect }) {
-  // Redirige al usuario a la página en inglés
-  return redirect('portfolio/en', 301); // 301 indica redirección permanente
+  return {
+    redirect: '/portfolio/en',
+    status: 301, // Redirección permanente
+  };
 }
 ---
 
-<Fragment>
-  TEST
-</Fragment>
+<Fragment></Fragment>
