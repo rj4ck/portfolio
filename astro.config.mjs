@@ -7,13 +7,12 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://rj4ck.github.io/portfolio',
   base: '/portfolio',
-  routes: [
-    '/:lang',
-    '/:lang/curriculum',
-  ],
   i18n: {
     defaultLocale: "en",
     locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false
+    }
   },
   integrations: [
     react(),
