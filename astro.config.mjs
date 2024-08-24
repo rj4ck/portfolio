@@ -12,7 +12,7 @@ export default defineConfig({
     '/:lang/curriculum',
   ],
   redirects: {
-    '': 'en'
+    '': '/portfolio/en'
   },
   i18n: {
     defaultLocale: "en",
