@@ -1,0 +1,13 @@
+---
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' }, props: {} },
+    { params: { lang: 'es' }, props: {} },
+  ];
+}
+
+export async function get({ params }) {
+  return Astro.redirect('/portfolio/en');
+}
+---
+
