@@ -1,13 +1,10 @@
 ---
-export async function getStaticPaths() {
-  return [
-    { params: { lang: 'en' }, props: {} },
-    { params: { lang: 'es' }, props: {} },
-  ];
-}
-
-export async function get({ params }) {
-  return Astro.redirect('/portfolio/en');
+export async function get({ redirect }) {
+  // Redirige al usuario a la página en inglés
+  return redirect('/portfolio/en', 301); // 301 indica redirección permanente
 }
 ---
 
+<Fragment>
+  TEST
+</Fragment>
