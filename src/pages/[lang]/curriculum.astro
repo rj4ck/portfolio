@@ -1,0 +1,134 @@
+---
+import Curriculum from "../../layouts/Curriculum.astro";
+
+import Skills from "../../components/Curriculum/Skills";
+import Education from "../../components/Curriculum/Education";
+import CurriculumSection from "../../components/Curriculum/CurriculumSection";
+
+import { ui } from "../../i18n/ui";
+import { useTranslations } from "../../i18n/utils";
+
+import TimeLine from "../../components/TimeLine";
+import ProjectList from "../../components/ProjectList";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "es" } }
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as keyof ui);
+---
+
+<Curriculum>
+  <div class="bg-white w-[8.5in] h-fit max-w-full mx-auto">
+    <header>
+      <p class="text-4xl font-bold uppercase">Raquel Jackson</p>
+      <p class="text-xl font-semibold text-orange-400">Full Stack Developer</p>
+
+      <div class="grid grid-cols-2 gap-2 my-4">
+        <div>
+          <p>
+            <i class="fa fa-location-dot text-orange-300 mr-0.5" />
+            San Pedro Sula, Honduras
+          </p>
+
+          <p>
+            <i class="fa fa-phone text-orange-300 mr-0.5" />
+            (+504) 9715-7277 / (+504) 3146-1429
+          </p>
+
+          <p>
+            <i class="fa fa-envelope text-orange-300 mr-0.5" />
+            r.jackson@msn.com
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <i class="fa fa-brands fa-linkedin text-orange-300 mr-0.5" />
+            <a href="http://linkedin.com/in/raquel-jackson" target="_blank">https://linkedin.com/in/raquel-jackson</a>
+          </p>
+
+          <p>
+            <i class="fa fa-brands fa-square-github text-orange-300 mr-0.5" />
+            <a href="https://github.com/rj4ck" target="_blank">https://github.com/rj4ck</a>
+          </p>
+
+          <p>
+            <i class="fa fa-brands fa-square-github text-orange-300 mr-0.5" />
+            <a href="https://github.com/rj4ck" target="_blank">https://rj4ck.github.io/portfolio</a>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <CurriculumSection title={t('CURRICULUM.SUMMARY.TITLE')} content={t('CURRICULUM.SUMMARY.DESCRIPTION')}/>
+
+    <CurriculumSection title={t('CURRICULUM.SKILLS.TITLE')}>
+      <Skills />
+    </CurriculumSection>
+
+    <CurriculumSection title={t("CURRICULUM.LANGUAGES.TITLE")}>
+      <div class="flex justify-evenly m-2">
+        <div>{t("CURRICULUM.LANGUAGES.ES")}:
+          <span class="bg-orange-300 rounded-3xl px-2 py-1 text-sm">
+            {t("CURRICULUM.LANGUAGES.NATIVE")}
+          </span>
+        </div>
+        <div>{t("CURRICULUM.LANGUAGES.EN")}:
+          <span class="bg-orange-300 rounded-3xl px-2 py-1 text-sm">
+            {t("CURRICULUM.LANGUAGES.INTERMEDIATE")}
+          </span>
+        </div>
+      </div>
+    </CurriculumSection>
+
+    <CurriculumSection title={t("CURRICULUM.EXPERIENCE.TITLE")}>
+      <div class={`space-y-8 relative`}>
+        <TimeLine showTimeline={false} startDate={"02/2022"} endDate={"01/2024"} location={"San Pedro Sula, Honduras"} date={'Feb 1, 2022'} title={"Code ÉXITOS"} subtitle={"Software developer"}>
+          <ProjectList
+            showTimeline={false}
+            title={"Frontend development"}
+            details={[
+              t("RECENT_WORKS.CODEX.1"),
+              t("RECENT_WORKS.CODEX.2"),
+              t("RECENT_WORKS.CODEX.3"),
+              t("RECENT_WORKS.CODEX.4"),
+              t("RECENT_WORKS.CODEX.5"),
+              t("RECENT_WORKS.CODEX.6"),
+              t("RECENT_WORKS.CODEX.7")
+            ]} />
+        </TimeLine>
+
+        <TimeLine showTimeline={false} startDate={"11/2014"} endDate={"02/2024"} location={"San Pedro Sula, Honduras"} date={'Nov 14, 2014'} title={"Clinpays"} subtitle={"Lead Developer"}>
+          <ProjectList
+            showTimeline={false}
+            title={"Development and Maintenance Management"}
+            details={[
+              t("RECENT_WORKS.CLINPAYS.1"),
+              t("RECENT_WORKS.CLINPAYS.2"),
+              t("RECENT_WORKS.CLINPAYS.3"),
+              t("RECENT_WORKS.CLINPAYS.4"),
+              t("RECENT_WORKS.CLINPAYS.5"),
+              t("RECENT_WORKS.CLINPAYS.6"),
+            ]} />
+        </TimeLine>
+      </div>
+    </CurriculumSection>
+
+    <CurriculumSection title={t("CURRICULUM.EDUCATION.TITLE")}>
+      <Education title={t("CURRICULUM.EDUCATION.SEDA.TITLE")} startDate="02/2024" endDate="07/2024" location={t("CURRICULUM.EDUCATION.SEDA.LOCATION")}
+                 school="SEDA College" />
+      <Education title={t("CURRICULUM.EDUCATION.UNIR.TITLE")} startDate="01/2022" location={t("CURRICULUM.EDUCATION.UNIR.LOCATION")}
+                 school="Universidad Internacional de La Rioja (UNIR)" />
+      <Education title={t("CURRICULUM.EDUCATION.UJN.TITLE")} startDate="01/2008" endDate="12/2012"
+                 location="San Pedro Sula, Honduras" school="Universidad Jesús de Nazaret" />
+    </CurriculumSection>
+
+
+  </div>
+
+</Curriculum>

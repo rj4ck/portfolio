@@ -9,8 +9,18 @@ export default defineConfig({
   base: '/portfolio',
   routes: [
     '/:lang',
+    '/:lang/curriculum',
   ],
-  output: "hybrid",
+  redirects: {
+    '': 'en'
+  },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  },
   integrations: [
     react(),
     tailwind(),

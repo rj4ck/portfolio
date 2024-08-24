@@ -12,7 +12,7 @@ const TechnicalSkills: React.FC<Props> = ({ title, skills = []}) => {
   return (
     <div className="rounded-md border-[0.05rem] shadow-md">
       <div className="p-6">
-        <p className="font-medium sm:text-lg">{title}</p>
+        <p className="font-medium sm:text-lg">{title || "TEST"}</p>
 
         <ul className="space-y-1 sm:mt-4">
           {skills.map((skill) => (

@@ -25,7 +25,9 @@ const RecentWorks: React.FC<Props> = ({ showTimeline }) => {
 					tags={["NestJS", "GraphQL", "Flesk", "Python", "AWS", "Lambda", "API Gateway"]}
 					details={[
 						"Efficiently integrated AWS, leveraging Lambda and API Gateway capabilities to achieve a flexible and highly available ",
-						"Implemented robust and scalable backend solutions using microservers with AWS Lambda and API Gateway, leveraging cloud infrastructure for efficiency and scalability.", "Developed and maintained servers using Python, taking advantage of its versatility and effectiveness in implementing business logic.", "Contributed to the development of services using NestJS, ensuring a robust and modular architecture for backend applications."
+						"Implemented robust and scalable backend solutions using microservers with AWS Lambda and API Gateway, leveraging cloud infrastructure for efficiency and scalability.",
+            "Developed and maintained servers using Python, taking advantage of its versatility and effectiveness in implementing business logic.",
+            "Contributed to the development of services using NestJS, ensuring a robust and modular architecture for backend applications."
 					]} />
 				<ProjectList
 					showTimeline={showTimeline}

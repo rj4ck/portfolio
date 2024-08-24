@@ -1,13 +1,18 @@
 ---
 import "@fortawesome/fontawesome-free/css/all.css";
 import BaseHead from "../components/BaseHead.astro";
+import { ui } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as keyof ui);
 ---
 
 <!doctype html>
-<html lang="en">
-	<BaseHead title="Raquel Jackson | Curriculum" description="Raquel Jackson - Curriculum" />
+<html lang={lang}>
+<BaseHead title=`Raquel Jackson | ${t("CURRICULUM.TITLE")}` description=`Raquel Jackson ${t("CURRICULUM.TITLE")}` />
 
-	<body class="w-full h-screen bg-white flex justify-center">
-  <slot />
-	</body>
+<body class="w-full h-screen bg-white flex justify-center">
+<slot />
+</body>
 </html>

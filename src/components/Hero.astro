@@ -1,5 +1,6 @@
 ---
 import { Image, getImage } from "astro:assets";
+import { ui } from '../i18n/ui';
 
 import avatarImage from "../images/avatar.jpg";
 
@@ -11,7 +12,7 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const { lang } = Astro.params;
 
 //const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const t = useTranslations(lang as keyof ui);
 ---
 
 <div class="container mx-auto text-center">
@@ -49,7 +50,7 @@ const t = useTranslations(lang);
            style="height: 3.15em !important;width: 10em !important;" />
     </a>
 
-    <a href="curriculum" target="_blank"
+    <a href={`${lang}/curriculum`} target="_blank"
        class="inline-block rounded border border-orange-600 px-12 py-3 text-sm font-medium text-orange-600 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring active:bg-orange-500">
       Curriculum
     </a>
