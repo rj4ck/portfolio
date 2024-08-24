@@ -1,54 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Section from '../components/Sections.astro';
-import WorkCard from "../components/WorkCard.astro";
-import TechnicalSkills from "../components/TechnicalSkills"
-import Hero from "../components/Hero.astro";
-import SocialMedia from "../components/SocialMedia";
-import RecentWorks from "../components/RecentWorks"
-
-const technicalSkills = await Astro.glob("../content/technicalSkills/*.md")
-const recentProjects = await Astro.glob("../content/recent-projects/*.md")
-
-export function getStaticPaths() {
-  return [
-    { params: { lang: 'en' } },
-    { params: { lang: 'es' } }
-  ];
+export async function get({ redirect }) {
+  return {
+    redirect: 'portfolio/en',
+    status: 301, // Redirección permanente
+  };
 }
 ---
 
-<Layout>
-  <div class="">
-    <header class="bg-gray-900 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-[30rem] lg:items-center lg:overflow-hidden xl:w-[30rem] text-white flex-col justify-between p-6">
-      <Hero />
-
-      <SocialMedia />
-    </header>
-
-    <main class="lg:ml-[30rem] overflow-auto p-8">
-      <Section title="Technical skills">
-        <div class="max-w-screen-xl">
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
-            {technicalSkills.map(skill => (
-              <TechnicalSkills title={skill.frontmatter.title} skills={skill.frontmatter.skills} />
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      <Section title="Personal projects">
-
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
-          {recentProjects.map(project => (
-            <WorkCard image={project?.frontmatter?.image} links={project?.frontmatter?.links} title={project?.frontmatter?.title} tags={project?.frontmatter?.tags} description={project?.frontmatter?.description} />
-          ))}
-        </div>
-      </Section>
-
-      <Section title="Recent works">
-        <RecentWorks />
-      </Section>
-    </main>
-  </div>
-</Layout>
+<Fragment></Fragment>
