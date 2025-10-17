@@ -134,9 +134,11 @@ const t = useTranslations(lang as keyof ui);
     </CurriculumSection>
 
     <CurriculumSection title={t("CURRICULUM.EDUCATION.TITLE")}>
+      <Education title={t("CURRICULUM.EDUCATION.EADIC.TITLE")} startDate="07/2025" location={t("CURRICULUM.EDUCATION.EADIC.LOCATION")}
+                 school="Universidad Internacional de La Rioja (UNIR)" />
       <Education title={t("CURRICULUM.EDUCATION.SEDA.TITLE")} startDate="02/2024" endDate="07/2024" location={t("CURRICULUM.EDUCATION.SEDA.LOCATION")}
                  school="SEDA College" />
-      <Education title={t("CURRICULUM.EDUCATION.UNIR.TITLE")} startDate="01/2022" location={t("CURRICULUM.EDUCATION.UNIR.LOCATION")}
+      <Education title={t("CURRICULUM.EDUCATION.UNIR.TITLE")} startDate="01/2022" endDate="12/2024" location={t("CURRICULUM.EDUCATION.UNIR.LOCATION")}
                  school="Universidad Internacional de La Rioja (UNIR)" />
       <Education title={t("CURRICULUM.EDUCATION.UJN.TITLE")} startDate="01/2008" endDate="12/2012"
                  location="San Pedro Sula, Honduras" school="Universidad Jesús de Nazaret" />

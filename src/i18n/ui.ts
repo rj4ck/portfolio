@@ -51,6 +51,8 @@ export const ui = {
     "CURRICULUM.EDUCATION.SEDA.LOCATION": "Dublin, Ireland",
     "CURRICULUM.EDUCATION.UNIR.TITLE": "Design and Project Management",
     "CURRICULUM.EDUCATION.UNIR.LOCATION": "La Rioja, Spain",
+    "CURRICULUM.EDUCATION.EADIC.TITLE": "Master in Big Data and Applied Artificial Intelligence",
+    "CURRICULUM.EDUCATION.EADIC.LOCATION": "Madrid, Spain",
     "CURRICULUM.EDUCATION.UJN.TITLE": "Industrial and Systems Engineering"
   },
   es: {
