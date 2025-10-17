@@ -14,8 +14,8 @@ interface Props {
 const TimeLine: React.FC<Props> = ({ icon, date, title, subtitle, children, showTimeline = true, startDate, endDate, location }) => {
 
 	return (
-		<div className="relative">
-			<div className="md:flex items-center md:space-x-4 mb-2">
+		<div className="relative mb-0 pb-0">
+			<div className="md:flex items-center md:space-x-4 mb-0">
 				{showTimeline && <div className="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
 
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1">
@@ -43,7 +43,7 @@ const TimeLine: React.FC<Props> = ({ icon, date, title, subtitle, children, show
 			</div>
 
 			<div
-				className={`p-2 ${!showTimeline ? '' : 'bg-white text-slate-500 p-4 rounded-md border-[0.05rem] border-slate-200 shadow ml-14 md:ml-44'}`}>
+				className={`p-2 ${!showTimeline ? '' : 'bg-white text-slate-500 p-2 rounded-md border-[0.05rem] border-slate-200 shadow ml-14 md:ml-44'}`}>
 				{children}
 			</div>
 		</div>
