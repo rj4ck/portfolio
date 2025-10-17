@@ -88,6 +88,21 @@ const t = useTranslations(lang as keyof ui);
 
     <CurriculumSection title={t("CURRICULUM.EXPERIENCE.TITLE")}>
       <div class={`space-y-8 relative`}>
+        <TimeLine showTimeline={false} startDate={"10/2024"} location={"Austin, Texas"} date={'Feb 1, 2022'} title={"Code ÉXITOS"} subtitle={"Software developer"}>
+          <ProjectList
+            showTimeline={false}
+            title={"Frontend development"}
+            details={[
+              t("RECENT_WORKS.CODEX.1"),
+              t("RECENT_WORKS.CODEX.2"),
+              t("RECENT_WORKS.CODEX.3"),
+              t("RECENT_WORKS.CODEX.4"),
+              t("RECENT_WORKS.CODEX.5"),
+              t("RECENT_WORKS.CODEX.6"),
+              t("RECENT_WORKS.CODEX.7")
+            ]} />
+        </TimeLine>
+
         <TimeLine showTimeline={false} startDate={"02/2022"} endDate={"01/2024"} location={"San Pedro Sula, Honduras"} date={'Feb 1, 2022'} title={"Code ÉXITOS"} subtitle={"Software developer"}>
           <ProjectList
             showTimeline={false}
