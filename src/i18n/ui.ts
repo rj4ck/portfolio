@@ -13,6 +13,13 @@ export const ui = {
     "HERO.MY_HOBBY": "Outside of work, I enjoy spending time with my friends and exploring new places.",
 
     "RECENT_WORKS.TITLE": "Recent Works",
+    "RECENT_WORKS.CODEX_2.1": "Develop responsive and interactive user interfaces using NuxtJS, following design specifications and ensuring alignment with project requirements and UI/UX best practices.",
+    "RECENT_WORKS.CODEX_2.2": "Collaborate with backend teams to integrate APIs and manage data flow between .NET microservices and frontend components.",
+    "RECENT_WORKS.CODEX_2.3": "Maintain and improve legacy backend modules built with Blazor and ASPX, focusing on bug fixing, performance optimization, and long-term stability.",
+    "RECENT_WORKS.CODEX_2.4": "Work closely with designers, QA, and other developers to ensure consistent and high-quality product delivery.",
+    "RECENT_WORKS.CODEX_2.5": "Apply clean coding practices, reusable components, and version control strategies to improve maintainability and collaboration within the team.",
+    "RECENT_WORKS.CODEX_2.6": "Support migration and modernization efforts, contributing to the gradual transition from legacy technologies to a microservices-based architecture.",
+
     "RECENT_WORKS.CODEX.1": "Led the development of interactive and efficient user interfaces using React Native, ReactJS and VueJS, ensuring a fluid and engaging user experience.",
     "RECENT_WORKS.CODEX.2": "Efficiently integrated AWS, leveraging Lambda and API Gateway capabilities to achieve a flexible and highly available.",
     "RECENT_WORKS.CODEX.3": "Implemented robust and scalable backend solutions using microservers with AWS Lambda and API Gateway, leveraging cloud infrastructure for efficiency and scalability.",
@@ -53,6 +60,13 @@ export const ui = {
     "HERO.MY_HOBBY": "Fuera del trabajo, disfruto pasar tiempo con mis amigos y explorar nuevos lugares.",
 
     "RECENT_WORKS.TITLE": "Trabajos Recientes",
+    "RECENT_WORKS.CODEX_2.1": "Desarrollo interfaces de usuario responsivas e interactivas utilizando NuxtJS, siguiendo las especificaciones de diseño y asegurando la alineación con los requerimientos del proyecto y las mejores prácticas de UI/UX.",
+    "RECENT_WORKS.CODEX_2.2": "Colaboro con los equipos de backend para integrar APIs y gestionar el flujo de datos entre los microservicios .NET y los componentes del frontend.",
+    "RECENT_WORKS.CODEX_2.3": "Mantengo y mejoro módulos backend legacy desarrollados con Blazor y ASPX, enfocándome en la corrección de errores, optimización del rendimiento y estabilidad a largo plazo.",
+    "RECENT_WORKS.CODEX_2.4": "Trabajo en estrecha colaboración con diseñadores, QA y otros desarrolladores para garantizar una entrega consistente y de alta calidad del producto.",
+    "RECENT_WORKS.CODEX_2.5": "Aplico prácticas de código limpio, componentes reutilizables y estrategias de control de versiones para mejorar la mantenibilidad y la colaboración dentro del equipo.",
+    "RECENT_WORKS.CODEX_2.6": "Apoyo los esfuerzos de migración y modernización, contribuyendo a la transición gradual de tecnologías legacy hacia una arquitectura basada en microservicios.",
+
     "RECENT_WORKS.CODEX.1": "Lideré el desarrollo de interfaces de usuario interactivas y eficientes utilizando React Native, ReactJS y VueJS, asegurando una experiencia de usuario fluida y atractiva.",
     "RECENT_WORKS.CODEX.2": "Integré AWS de manera eficiente, aprovechando las capacidades de Lambda y API Gateway para lograr una alta disponibilidad y flexibilidad.",
     "RECENT_WORKS.CODEX.3": "Implementé soluciones backend robustas y escalables utilizando microservidores con AWS Lambda y API Gateway, aprovechando la infraestructura en la nube para mejorar la eficiencia y la escalabilidad.",
