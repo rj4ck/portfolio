@@ -15,7 +15,7 @@ const TimeLine: React.FC<Props> = ({ icon, date, title, subtitle, children, show
 
 	return (
 		<div className="relative">
-			<div className="md:flex items-center md:space-x-4 mb-3">
+			<div className="md:flex items-center md:space-x-4 mb-2">
 				{showTimeline && <div className="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
 
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1">
