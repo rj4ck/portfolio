@@ -1,12 +1,13 @@
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
+import vercel from "@astrojs/vercel/static";
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://rj4ck.github.io/portfolio',
-  base: '/portfolio',
+  // Configuración para Vercel (sin base path)
+  site: import.meta.env.SITE || 'https://rj4ck-portfolio.vercel.app',
   i18n: {
     defaultLocale: "en",
     locales: ["es", "en"],
@@ -15,6 +16,8 @@ export default defineConfig({
       redirectToDefaultLocale: true
     }
   },
+  output: "static",
+  adapter: vercel(),
   integrations: [
     react(),
     tailwind(),
