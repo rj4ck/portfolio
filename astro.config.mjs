@@ -23,5 +23,11 @@ export default defineConfig({
         forward: ["dataLayer.push"],
       }
     })
-  ]
+  ],
+  // Asegurar que los scripts de Partytown se copien correctamente
+  vite: {
+    ssr: {
+      noExternal: ['@astrojs/partytown']
+    }
+  }
 });

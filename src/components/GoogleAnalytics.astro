@@ -1,11 +1,22 @@
 ---
-const GA_MEASUREMENT_ID = 'G-TC899Q2DWH';
----
-<script async src=`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 
-  gtag('config', `G-TC899Q2DWH` );
-</script>
+// No renderizar en desarrollo
+const isDev = import.meta.env.DEV;
+if (isDev || !GA_MEASUREMENT_ID) {
+  console.log('Google Analytics deshabilitado en desarrollo o ID no configurado');
+}
+---
+
+{!isDev && GA_MEASUREMENT_ID && (
+  <>
+    <!-- Google Analytics con Partytown -->
+    <script type="text/partytown" async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+    <script type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID);
+    </script>
+  </>
+)}
