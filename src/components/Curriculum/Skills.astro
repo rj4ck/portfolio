@@ -3,14 +3,14 @@ const categories = await Astro.glob("../../content/technical-skills/*.md");
 const sorted = categories.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 ---
 
-<div class="grid grid-cols-2 gap-x-8 gap-y-3 mt-2">
+<div class="grid grid-cols-2 gap-x-10 gap-y-3 mt-2">
   {
     sorted.map((cat) => (
       <div>
-        <p class="text-xs font-bold uppercase tracking-wider text-orange-500 mb-1">
+        <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-orange-500 mb-1">
           {cat.frontmatter.title}
         </p>
-        <p class="text-sm text-gray-700">
+        <p class="text-[11px] text-gray-600 leading-relaxed">
           {cat.frontmatter.skills.map((s: { title: string }) => s.title).join(" · ")}
         </p>
       </div>

@@ -16,45 +16,44 @@ const t = useTranslations(lang as "en" | "es");
 ---
 
 <CurriculumLayout>
-  <div class="bg-white w-[8.5in] h-fit max-w-full mx-auto">
-    <header>
-      <p class="text-4xl font-bold uppercase">Raquel Jackson</p>
-      <p class="text-xl font-semibold text-orange-400">Full Stack Developer</p>
+  <div class="bg-white w-[8.5in] h-fit max-w-full mx-auto px-10 py-8">
+    <header class="mb-5">
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900">Raquel Jackson</h1>
+      <p class="text-sm font-medium text-orange-500 mt-0.5">Full Stack Developer</p>
 
-      <div class="grid grid-cols-2 gap-2 my-4">
-        <div>
-          <p>
-            <i class="fa fa-location-dot text-orange-300 mr-0.5"></i>
-            San Pedro Sula, Honduras
-          </p>
-          <p>
-            <i class="fa fa-phone text-orange-300 mr-0.5"></i>
-            (+504) 3146-1429
-          </p>
-          <p>
-            <i class="fa fa-envelope text-orange-300 mr-0.5"></i>
-            r.jackson@msn.com
-          </p>
-        </div>
+      <div class="border-b border-gray-200 my-3"></div>
 
-        <div>
-          <p>
-            <i class="fa fa-brands fa-linkedin text-orange-300 mr-0.5"></i>
-            <a href="https://linkedin.com/in/raquel-jackson" target="_blank">
-              linkedin.com/in/raquel-jackson
-            </a>
-          </p>
-          <p>
-            <i class="fa fa-brands fa-github text-orange-300 mr-0.5"></i>
-            <a href="https://github.com/rj4ck" target="_blank"> github.com/rj4ck </a>
-          </p>
-          <p>
-            <i class="fa fa-globe text-orange-300 mr-0.5"></i>
-            <a href="https://rj4ck.github.io/portfolio" target="_blank">
-              rj4ck.github.io/portfolio
-            </a>
-          </p>
-        </div>
+      <div class="grid grid-cols-2 gap-x-8 gap-y-1">
+        <p class="flex items-center gap-2 text-xs text-gray-600">
+          <i class="fa fa-location-dot text-orange-400 w-3 text-center"></i>
+          San Pedro Sula, Honduras
+        </p>
+        <p class="flex items-center gap-2 text-xs text-gray-600">
+          <i class="fa fa-brands fa-linkedin text-orange-400 w-3 text-center"></i>
+          <a href="https://linkedin.com/in/raquel-jackson" target="_blank" class="hover:text-orange-500 transition-colors">
+            linkedin.com/in/raquel-jackson
+          </a>
+        </p>
+        <p class="flex items-center gap-2 text-xs text-gray-600">
+          <i class="fa fa-phone text-orange-400 w-3 text-center"></i>
+          (+504) 3146-1429
+        </p>
+        <p class="flex items-center gap-2 text-xs text-gray-600">
+          <i class="fa fa-brands fa-github text-orange-400 w-3 text-center"></i>
+          <a href="https://github.com/rj4ck" target="_blank" class="hover:text-orange-500 transition-colors">
+            github.com/rj4ck
+          </a>
+        </p>
+        <p class="flex items-center gap-2 text-xs text-gray-600">
+          <i class="fa fa-envelope text-orange-400 w-3 text-center"></i>
+          r.jackson@msn.com
+        </p>
+        <p class="flex items-center gap-2 text-xs text-gray-600">
+          <i class="fa fa-globe text-orange-400 w-3 text-center"></i>
+          <a href="https://rj4ck.github.io/portfolio" target="_blank" class="hover:text-orange-500 transition-colors">
+            rj4ck.github.io/portfolio
+          </a>
+        </p>
       </div>
     </header>
 
@@ -64,75 +63,81 @@ const t = useTranslations(lang as "en" | "es");
     />
 
     <CurriculumSection title={t("CURRICULUM.EXPERIENCE.TITLE")}>
-      <div class="space-y-6">
-        <TimeLine
-          showTimeline={false}
-          startDate={"10/2024"}
-          location={"Austin, Texas"}
-          date={"Oct 2024"}
-          title={"Code ÉXITOS"}
-          subtitle={"Software Engineer 2"}
-        >
-          <ProjectList
+      <div class="space-y-4">
+        <div class="avoid-break">
+          <TimeLine
             showTimeline={false}
-            title={""}
-            details={[
-              t("RECENT_WORKS.CODEX_2.1"),
-              t("RECENT_WORKS.CODEX_2.2"),
-              t("RECENT_WORKS.CODEX_2.3"),
-              t("RECENT_WORKS.CODEX_2.4"),
-              t("RECENT_WORKS.CODEX_2.5"),
-              t("RECENT_WORKS.CODEX_2.6"),
-            ]}
-          />
-        </TimeLine>
+            startDate={"10/2024"}
+            location={"Austin, Texas"}
+            date={"Oct 2024"}
+            title={"Code ÉXITOS"}
+            subtitle={"Software Engineer 2"}
+          >
+            <ProjectList
+              showTimeline={false}
+              title={""}
+              details={[
+                t("RECENT_WORKS.CODEX_2.1"),
+                t("RECENT_WORKS.CODEX_2.2"),
+                t("RECENT_WORKS.CODEX_2.3"),
+                t("RECENT_WORKS.CODEX_2.4"),
+                t("RECENT_WORKS.CODEX_2.5"),
+                t("RECENT_WORKS.CODEX_2.6"),
+              ]}
+            />
+          </TimeLine>
+        </div>
 
-        <TimeLine
-          showTimeline={false}
-          startDate={"02/2022"}
-          endDate={"01/2024"}
-          location={"San Pedro Sula, Honduras"}
-          date={"Feb 2022"}
-          title={"Code ÉXITOS"}
-          subtitle={"Software Developer"}
-        >
-          <ProjectList
+        <div class="avoid-break">
+          <TimeLine
             showTimeline={false}
-            title={""}
-            details={[
-              t("RECENT_WORKS.CODEX.1"),
-              t("RECENT_WORKS.CODEX.2"),
-              t("RECENT_WORKS.CODEX.3"),
-              t("RECENT_WORKS.CODEX.4"),
-              t("RECENT_WORKS.CODEX.5"),
-              t("RECENT_WORKS.CODEX.6"),
-              t("RECENT_WORKS.CODEX.7"),
-            ]}
-          />
-        </TimeLine>
+            startDate={"02/2022"}
+            endDate={"01/2024"}
+            location={"San Pedro Sula, Honduras"}
+            date={"Feb 2022"}
+            title={"Code ÉXITOS"}
+            subtitle={"Software Developer"}
+          >
+            <ProjectList
+              showTimeline={false}
+              title={""}
+              details={[
+                t("RECENT_WORKS.CODEX.1"),
+                t("RECENT_WORKS.CODEX.2"),
+                t("RECENT_WORKS.CODEX.3"),
+                t("RECENT_WORKS.CODEX.4"),
+                t("RECENT_WORKS.CODEX.5"),
+                t("RECENT_WORKS.CODEX.6"),
+                t("RECENT_WORKS.CODEX.7"),
+              ]}
+            />
+          </TimeLine>
+        </div>
 
-        <TimeLine
-          showTimeline={false}
-          startDate={"11/2014"}
-          endDate={"02/2024"}
-          location={"San Pedro Sula, Honduras"}
-          date={"Nov 2014"}
-          title={"Clinpays"}
-          subtitle={"Lead Developer"}
-        >
-          <ProjectList
+        <div class="avoid-break">
+          <TimeLine
             showTimeline={false}
-            title={""}
-            details={[
-              t("RECENT_WORKS.CLINPAYS.1"),
-              t("RECENT_WORKS.CLINPAYS.2"),
-              t("RECENT_WORKS.CLINPAYS.3"),
-              t("RECENT_WORKS.CLINPAYS.4"),
-              t("RECENT_WORKS.CLINPAYS.5"),
-              t("RECENT_WORKS.CLINPAYS.6"),
-            ]}
-          />
-        </TimeLine>
+            startDate={"11/2014"}
+            endDate={"02/2024"}
+            location={"San Pedro Sula, Honduras"}
+            date={"Nov 2014"}
+            title={"Clinpays"}
+            subtitle={"Lead Developer"}
+          >
+            <ProjectList
+              showTimeline={false}
+              title={""}
+              details={[
+                t("RECENT_WORKS.CLINPAYS.1"),
+                t("RECENT_WORKS.CLINPAYS.2"),
+                t("RECENT_WORKS.CLINPAYS.3"),
+                t("RECENT_WORKS.CLINPAYS.4"),
+                t("RECENT_WORKS.CLINPAYS.5"),
+                t("RECENT_WORKS.CLINPAYS.6"),
+              ]}
+            />
+          </TimeLine>
+        </div>
       </div>
     </CurriculumSection>
 
@@ -145,15 +150,19 @@ const t = useTranslations(lang as "en" | "es");
     </CurriculumSection>
 
     <CurriculumSection title={t("CURRICULUM.LANGUAGES.TITLE")}>
-      <div class="flex gap-8 mt-1 text-sm">
-        <span>
-          {t("CURRICULUM.LANGUAGES.ES")}
-          <span class="text-gray-500 ml-1">{t("CURRICULUM.LANGUAGES.NATIVE")}</span>
-        </span>
-        <span>
-          {t("CURRICULUM.LANGUAGES.EN")}
-          <span class="text-gray-500 ml-1">{t("CURRICULUM.LANGUAGES.INTERMEDIATE")}</span>
-        </span>
+      <div class="flex gap-6 mt-1">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-semibold text-gray-800">{t("CURRICULUM.LANGUAGES.ES")}</span>
+          <span class="px-1.5 py-0.5 rounded text-[10px] font-medium bg-orange-50 text-orange-500 border border-orange-200">
+            {t("CURRICULUM.LANGUAGES.NATIVE")}
+          </span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-semibold text-gray-800">{t("CURRICULUM.LANGUAGES.EN")}</span>
+          <span class="px-1.5 py-0.5 rounded text-[10px] font-medium bg-gray-50 text-gray-500 border border-gray-200">
+            {t("CURRICULUM.LANGUAGES.INTERMEDIATE")}
+          </span>
+        </div>
       </div>
     </CurriculumSection>
   </div>

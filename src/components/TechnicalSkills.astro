@@ -1,4 +1,6 @@
 ---
+import { useTranslations } from "../i18n/utils";
+
 type TechnicalSkill = {
   title: string;
   years: string;
@@ -7,9 +9,21 @@ type TechnicalSkill = {
 interface Props {
   title?: string;
   skills: TechnicalSkill[];
+  lang?: "en" | "es";
 }
 
-const { title, skills = [] } = Astro.props;
+const { title, skills = [], lang = "en" } = Astro.props;
+const t = useTranslations(lang);
+
+const categoryKeyMap: Record<string, "SKILLS.CATEGORY.FRONTEND" | "SKILLS.CATEGORY.BACKEND" | "SKILLS.CATEGORY.DATABASES" | "SKILLS.CATEGORY.OTHERS"> = {
+  frontend: "SKILLS.CATEGORY.FRONTEND",
+  backend: "SKILLS.CATEGORY.BACKEND",
+  databases: "SKILLS.CATEGORY.DATABASES",
+  others: "SKILLS.CATEGORY.OTHERS",
+};
+
+const categoryKey = categoryKeyMap[title?.toLowerCase() ?? ""];
+const displayTitle = categoryKey ? t(categoryKey) : (title ?? "Skills");
 
 function getLevel(years: string): number {
   if (years.startsWith("+")) return 5;
@@ -40,7 +54,7 @@ const icon = getCategoryIcon(title ?? "");
       <i class={`fa fa-solid ${icon} text-orange-400 text-sm`}></i>
     </div>
     <h3 class="text-white font-semibold text-base tracking-wide">
-      {title ?? "Skills"}
+      {displayTitle}
     </h3>
   </div>
 

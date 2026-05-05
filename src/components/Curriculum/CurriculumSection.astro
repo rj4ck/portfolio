@@ -5,10 +5,16 @@ interface Props {
 }
 ---
 
-<div class="mb-4">
-  <p class="text-xl font-semibold uppercase border-b-2 border-black">
-    {Astro.props.title}
-  </p>
-  {Astro.props.content && <p class="pt-1 text-sm">{Astro.props.content}</p>}
+<div class="mb-5">
+  <div class="flex items-center gap-2.5 mb-1.5">
+    <span class="w-[3px] h-3.5 bg-orange-500 rounded-full shrink-0"></span>
+    <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-500">
+      {Astro.props.title}
+    </p>
+  </div>
+  <div class="border-b border-gray-200 mb-3"></div>
+  {Astro.props.content && (
+    <p class="text-xs text-gray-600 leading-relaxed">{Astro.props.content}</p>
+  )}
   <slot />
 </div>

@@ -1,15 +1,27 @@
 ---
 import "@fortawesome/fontawesome-free/css/all.css";
 import BaseHead from "../components/BaseHead.astro";
+import LanguageSwitcher from "../components/LanguageSwitcher.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Raquel Jackson — Full Stack Developer",
+  description = "Full Stack Developer specialized in JavaScript — ReactJS, VueJS, NuxtJS and AWS.",
+} = Astro.props;
 
 const { lang } = Astro.params;
 ---
 
 <!doctype html>
-<html lang={lang}>
-  <BaseHead title="Raquel Jackson" description="Raquel Jackson - Portfolio" />
+<html lang={lang ?? "en"}>
+  <BaseHead title={title} description={description} lang={lang ?? "en"} />
 
   <body class="bg-gray-950 text-gray-100">
+    <LanguageSwitcher lang={lang ?? "en"} />
     <slot />
   </body>
 </html>

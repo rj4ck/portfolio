@@ -10,7 +10,9 @@ interface Props {
   tags?: string[];
   links?: Links[];
   description: string;
+  description_es?: string;
   featured?: boolean;
+  lang?: "en" | "es";
 }
 
 const {
@@ -20,9 +22,12 @@ const {
   tags,
   links,
   description,
+  description_es,
   featured = false,
+  lang = "en",
 } = Astro.props;
 const year = createdDate ? new Date(createdDate).getFullYear() : null;
+const displayDescription = lang === "es" && description_es ? description_es : description;
 ---
 
 <div
@@ -54,7 +59,7 @@ const year = createdDate ? new Date(createdDate).getFullYear() : null;
     <p
       class={`text-gray-400 text-sm leading-relaxed flex-1 ${featured ? "line-clamp-3" : "line-clamp-2"}`}
     >
-      {description}
+      {displayDescription}
     </p>
 
     {

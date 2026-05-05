@@ -7,6 +7,7 @@ import Hero from "../../components/Hero.astro";
 import SocialMedia from "../../components/SocialMedia.astro";
 import RecentWorks from "../../components/RecentWorks.astro";
 import CollaborationCard from "../../components/CollaborationCard.astro";
+import { useTranslations } from "../../i18n/utils";
 
 const technicalSkills = await Astro.glob("../../content/technical-skills/*.md");
 const recentProjects = await Astro.glob("../../content/recent-projects/*.md");
@@ -20,9 +21,19 @@ export function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
+const t = useTranslations(lang as "en" | "es");
+
+const pageTitle =
+  lang === "es"
+    ? "Raquel Jackson — Desarrolladora Full Stack"
+    : "Raquel Jackson — Full Stack Developer";
+const pageDescription =
+  lang === "es"
+    ? "Desarrolladora Full Stack especializada en JavaScript — ReactJS, VueJS, NuxtJS, AWS y sistemas de pago."
+    : "Full Stack Developer specialized in JavaScript — ReactJS, VueJS, NuxtJS, AWS and payment systems.";
 ---
 
-<Layout>
+<Layout title={pageTitle} description={pageDescription}>
   <div class="">
     <header
       class="bg-gray-900 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-[30rem] lg:items-center lg:overflow-hidden xl:w-[30rem] text-white flex-col justify-between p-6"
@@ -34,34 +45,41 @@ const { lang } = Astro.params;
     </header>
 
     <main class="lg:ml-[30rem] overflow-auto px-8 lg:px-16">
-      <Section title="Technical skills">
+      <Section title={t("NAV.TECHNICAL_SKILLS")}>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-6">
           {
             technicalSkills.map((skill) => (
-              <TechnicalSkills title={skill.frontmatter.title} skills={skill.frontmatter.skills} />
-            ))
-          }
-        </div>
-      </Section>
-
-      <Section title="Collaborations">
-        <div class="max-w-3xl">
-          {
-            sortedCollaborations.map((item) => (
-              <CollaborationCard
-                title={item.frontmatter.title}
-                role={item.frontmatter.role}
-                location={item.frontmatter.location}
-                collaborator={item.frontmatter.collaborator}
-                tags={item.frontmatter.tags}
-                description={item.frontmatter.description}
+              <TechnicalSkills
+                title={skill.frontmatter.title}
+                skills={skill.frontmatter.skills}
+                lang={lang as "en" | "es"}
               />
             ))
           }
         </div>
       </Section>
 
-      <Section title="Personal projects">
+      <Section title={t("NAV.COLLABORATIONS")}>
+        <div class="max-w-3xl">
+          {
+            sortedCollaborations.map((item) => (
+              <CollaborationCard
+                title={item.frontmatter.title}
+                role={item.frontmatter.role}
+                role_es={item.frontmatter.role_es}
+                location={item.frontmatter.location}
+                collaborator={item.frontmatter.collaborator}
+                tags={item.frontmatter.tags}
+                description={item.frontmatter.description}
+                description_es={item.frontmatter.description_es}
+                lang={lang as "en" | "es"}
+              />
+            ))
+          }
+        </div>
+      </Section>
+
+      <Section title={t("NAV.PERSONAL_PROJECTS")}>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6">
           {
             recentProjects.map((project, index) => (
@@ -73,7 +91,9 @@ const { lang } = Astro.params;
                   tags={project?.frontmatter?.tags}
                   links={project?.frontmatter?.links}
                   description={project?.frontmatter?.description}
+                  description_es={project?.frontmatter?.description_es}
                   featured={index === 0}
+                  lang={lang as "en" | "es"}
                 />
               </div>
             ))
@@ -81,7 +101,7 @@ const { lang } = Astro.params;
         </div>
       </Section>
 
-      <Section title="Recent works">
+      <Section title={t("NAV.RECENT_WORKS")}>
         <RecentWorks lang={lang} />
       </Section>
     </main>

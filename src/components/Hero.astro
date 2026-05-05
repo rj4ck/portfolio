@@ -72,21 +72,24 @@ const t = useTranslations(lang as "en" | "es");
     </div>
   </div>
 
-  <div class="grid grid-flow-col gap-4 justify-center">
-    <a href="https://www.buymeacoffee.com/rj4ck" target="_blank" class="inline-block">
-      <img
-        src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-        alt="Buy Me A Coffee"
-        style="height: 3.15em !important;width: 10em !important;"
-      />
+  <div class="flex flex-wrap gap-3 justify-center">
+    <a
+      href="curriculum"
+      target="_blank"
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-orange-500 text-white text-sm font-semibold hover:bg-orange-400 active:bg-orange-600 transition-colors duration-200 shadow-lg shadow-orange-500/20"
+    >
+      <i class="fa fa-solid fa-file-lines"></i>
+      Curriculum
     </a>
 
     <a
-      href={`curriculum`}
+      href="https://www.buymeacoffee.com/rj4ck"
       target="_blank"
-      class="inline-block rounded border border-orange-600 px-12 py-3 text-sm font-medium text-orange-600 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring active:bg-orange-500"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gray-700 bg-gray-800/50 text-gray-300 text-sm font-medium hover:border-yellow-500/50 hover:text-yellow-300 hover:bg-gray-800 transition-all duration-200"
     >
-      Curriculum
+      <i class="fa fa-solid fa-mug-hot text-yellow-400"></i>
+      Buy me a coffee
     </a>
   </div>
 </div>

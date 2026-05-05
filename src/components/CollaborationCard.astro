@@ -2,13 +2,18 @@
 interface Props {
   title: string;
   role: string;
+  role_es?: string;
   location: string;
   collaborator?: string;
   tags?: string[];
   description: string;
+  description_es?: string;
+  lang?: "en" | "es";
 }
 
-const { title, role, location, collaborator, tags, description } = Astro.props;
+const { title, role, role_es, location, collaborator, tags, description, description_es, lang = "en" } = Astro.props;
+const displayRole = lang === "es" && role_es ? role_es : role;
+const displayDescription = lang === "es" && description_es ? description_es : description;
 ---
 
 <div class="group py-7 border-b border-gray-800 last:border-0">
@@ -19,7 +24,7 @@ const { title, role, location, collaborator, tags, description } = Astro.props;
       >
         {title}
       </h3>
-      <span class="text-orange-400 text-xs sm:text-sm font-medium shrink-0 mt-1">{role}</span>
+      <span class="text-orange-400 text-xs sm:text-sm font-medium shrink-0 mt-1">{displayRole}</span>
     </div>
   </div>
 
@@ -38,7 +43,7 @@ const { title, role, location, collaborator, tags, description } = Astro.props;
     }
   </div>
 
-  <p class="text-gray-400 text-sm leading-relaxed max-w-2xl">{description}</p>
+  <p class="text-gray-400 text-sm leading-relaxed max-w-2xl">{displayDescription}</p>
 
   {
     tags && tags.length > 0 && (

@@ -1,0 +1,85 @@
+---
+const username = "rj4ck";
+
+let totalRepos = 0;
+let topLangs: { name: string; count: number }[] = [];
+
+try {
+  const [userRes, reposRes] = await Promise.all([
+    fetch(`https://api.github.com/users/${username}`),
+    fetch(`https://api.github.com/users/${username}/repos?per_page=100`),
+  ]);
+
+  if (userRes.ok) {
+    const user = await userRes.json();
+    totalRepos = user.public_repos;
+  }
+
+  if (reposRes.ok) {
+    const repos = await reposRes.json();
+    const langCount: Record<string, number> = {};
+    for (const repo of repos) {
+      if (repo.language) langCount[repo.language] = (langCount[repo.language] ?? 0) + 1;
+    }
+    topLangs = Object.entries(langCount)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 6)
+      .map(([name, count]) => ({ name, count }));
+  }
+} catch {}
+
+const stats = [
+  { label: "Repositories", value: totalRepos, icon: "fa-folder" },
+];
+
+const streakUrl =
+  `https://streak-stats.demolab.com?user=${username}` +
+  `&hide_border=true&background=111827&border=374151` +
+  `&stroke=374151&ring=f97316&fire=f97316` +
+  `&currStreakLabel=f97316&sideLabels=9ca3af` +
+  `&dates=6b7280&sideNums=e5e7eb&currStreakNum=ffffff`;
+
+const maxLang = topLangs[0]?.count ?? 1;
+---
+
+<div class="space-y-4">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    {stats.map((s) => (
+      <div class="rounded-xl border border-gray-700 bg-gray-900 px-5 py-4 flex items-center gap-4">
+        <div class="w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center shrink-0">
+          <i class={`fa fa-solid ${s.icon} text-orange-400`}></i>
+        </div>
+        <div>
+          <p class="text-xl font-bold text-white">{s.value}</p>
+          <p class="text-xs text-gray-500">{s.label}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="rounded-xl border border-gray-700 bg-gray-900 p-5">
+      <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Top Languages</p>
+      <div class="space-y-2">
+        {topLangs.map((lang) => (
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-gray-300">{lang.name}</span>
+              <span class="text-gray-600">{lang.count} repos</span>
+            </div>
+            <div class="h-1 rounded-full bg-gray-800">
+              <div
+                class="h-1 rounded-full bg-orange-400"
+                style={`width: ${Math.round((lang.count / maxLang) * 100)}%`}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-700 overflow-hidden">
+      <img src={streakUrl} alt="GitHub Streak" class="w-full h-full object-cover" loading="lazy" />
+    </div>
+  </div>
+</div>

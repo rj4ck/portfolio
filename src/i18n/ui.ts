@@ -18,9 +18,19 @@ export const ui = {
     "HERO.CURRENTLY.ROLE": "Software Engineer 2 at Code ÉXITOS",
     "HERO.CURRENTLY.STACK": "VueJS · NuxtJS · .NET · ASPX Migration",
 
+    "NAV.TECHNICAL_SKILLS": "Technical skills",
+    "NAV.COLLABORATIONS": "Collaborations",
+    "NAV.PERSONAL_PROJECTS": "Personal projects",
+    "NAV.RECENT_WORKS": "Recent works",
+
+    "SKILLS.CATEGORY.FRONTEND": "Frontend",
+    "SKILLS.CATEGORY.BACKEND": "Backend",
+    "SKILLS.CATEGORY.DATABASES": "Databases",
+    "SKILLS.CATEGORY.OTHERS": "Others",
+
     "RECENT_WORKS.TITLE": "Recent Works",
     "RECENT_WORKS.CODEX_2.1":
-      "Leading migration of legacy ASPX views to VueJS, rebuilding UI components to modern standards while preserving business logic and ensuring zero regression.",
+      "Contributing to the migration of legacy ASPX views to VueJS, rebuilding UI components to modern standards while preserving business logic and ensuring zero regression.",
     "RECENT_WORKS.CODEX_2.2":
       "Developing new frontend views using VueJS and NuxtJS based on client requirements, translating design specifications into responsive and maintainable components.",
     "RECENT_WORKS.CODEX_2.3":
@@ -33,32 +43,32 @@ export const ui = {
       "Applying reusable component architecture and version control best practices to improve team velocity and long-term maintainability.",
 
     "RECENT_WORKS.CODEX.1":
-      "Led the development of interactive and efficient user interfaces using React Native, ReactJS and VueJS, ensuring a fluid and engaging user experience.",
+      "Developed interactive and efficient user interfaces using React Native, ReactJS and VueJS, ensuring a fluid and engaging user experience.",
     "RECENT_WORKS.CODEX.2":
-      "Efficiently integrated AWS, leveraging Lambda and API Gateway capabilities to achieve a flexible and highly available.",
+      "Deployed and managed containerized services on AWS using ECS and ECR, building CI/CD pipelines for reliable delivery across environments.",
     "RECENT_WORKS.CODEX.3":
-      "Implemented robust and scalable backend solutions using microservers with AWS Lambda and API Gateway, leveraging cloud infrastructure for efficiency and scalability.",
+      "Implemented backend solutions using microservices with AWS Lambda and API Gateway, leveraging cloud infrastructure for efficiency and scalability.",
     "RECENT_WORKS.CODEX.4":
       "Developed and maintained servers using Python, taking advantage of its versatility and effectiveness in implementing business logic.",
     "RECENT_WORKS.CODEX.5":
       "Contributed to the development of services using NestJS, ensuring a robust and modular architecture for backend applications.",
     "RECENT_WORKS.CODEX.6":
-      "Implemented development best practices to ensure application optimization and performance, improving efficiency and user experience.",
+      "Applied development best practices to ensure application optimization and performance, improving efficiency and user experience.",
     "RECENT_WORKS.CODEX.7":
-      "Worked closely with cross-functional teams to ensure effective integration of frontend and backend components, ensuring consistency and effectiveness of the final product",
+      "Worked closely with cross-functional teams to ensure effective integration of frontend and backend components.",
 
     "RECENT_WORKS.CLINPAYS.1":
-      "Supervision and coordination of new developments, ensuring their alignment with the company's strategic objectives.",
+      "Led the development team, supervising and coordinating new features aligned with the company's strategic objectives.",
     "RECENT_WORKS.CLINPAYS.2":
-      "Implementation and monitoring of preventive and corrective maintenance to guarantee the stability and efficiency of the systems.",
+      "Delivered integrations with multiple financial entities in Honduras, enabling real-time payment processing and account reconciliation.",
     "RECENT_WORKS.CLINPAYS.3":
-      "Responsible for the comprehensive management of CLINPAYS servers, as well as servers associated with additional projects",
+      "Implemented KYC and 3DS authentication flows in partnership with Banco BAC Honduras, meeting regulatory and security compliance requirements.",
     "RECENT_WORKS.CLINPAYS.4":
-      "Implementation of security and optimization measures to ensure a robust and reliable server environment.",
+      "Participated in the PCI DSS compliance team, contributing to security controls, audits, and policy enforcement for the payments platform.",
     "RECENT_WORKS.CLINPAYS.5":
-      "Active collaboration as part of the payments API development team, contributing to the design, implementation and continuous improvement of this essential interface.",
+      "Managed CLINPAYS server infrastructure and associated projects, implementing security hardening and performance optimizations.",
     "RECENT_WORKS.CLINPAYS.6":
-      "Lead the development and implementation of a collections orchestrator, establishing effective connections with banks and electronic wallets.",
+      "Led the design and implementation of a collections orchestrator, establishing effective integrations with banks and electronic wallets.",
 
     "CURRICULUM.TITLE": "Curriculum Vitae",
     "CURRICULUM.SUMMARY.TITLE": "Summary",
@@ -93,9 +103,19 @@ export const ui = {
     "HERO.CURRENTLY.ROLE": "Software Engineer 2 en Code ÉXITOS",
     "HERO.CURRENTLY.STACK": "VueJS · NuxtJS · .NET · Migración ASPX",
 
+    "NAV.TECHNICAL_SKILLS": "Habilidades técnicas",
+    "NAV.COLLABORATIONS": "Colaboraciones",
+    "NAV.PERSONAL_PROJECTS": "Proyectos personales",
+    "NAV.RECENT_WORKS": "Trabajos recientes",
+
+    "SKILLS.CATEGORY.FRONTEND": "Frontend",
+    "SKILLS.CATEGORY.BACKEND": "Backend",
+    "SKILLS.CATEGORY.DATABASES": "Bases de datos",
+    "SKILLS.CATEGORY.OTHERS": "Otros",
+
     "RECENT_WORKS.TITLE": "Trabajos Recientes",
     "RECENT_WORKS.CODEX_2.1":
-      "Liderando la migración de vistas ASPX legacy a VueJS, reconstruyendo componentes de UI con estándares modernos y asegurando cero regresiones en el proceso.",
+      "Contribuyendo a la migración de vistas ASPX legacy a VueJS, reconstruyendo componentes de UI con estándares modernos y asegurando cero regresiones en el proceso.",
     "RECENT_WORKS.CODEX_2.2":
       "Desarrollando nuevas vistas frontend con VueJS y NuxtJS según los requerimientos del cliente, traduciendo especificaciones de diseño en componentes responsivos y mantenibles.",
     "RECENT_WORKS.CODEX_2.3":
@@ -108,32 +128,32 @@ export const ui = {
       "Aplicando arquitectura de componentes reutilizables y buenas prácticas de control de versiones para mejorar la velocidad del equipo y la mantenibilidad a largo plazo.",
 
     "RECENT_WORKS.CODEX.1":
-      "Lideré el desarrollo de interfaces de usuario interactivas y eficientes utilizando React Native, ReactJS y VueJS, asegurando una experiencia de usuario fluida y atractiva.",
+      "Desarrollé interfaces de usuario interactivas y eficientes utilizando React Native, ReactJS y VueJS, asegurando una experiencia de usuario fluida y atractiva.",
     "RECENT_WORKS.CODEX.2":
-      "Integré AWS de manera eficiente, aprovechando las capacidades de Lambda y API Gateway para lograr una alta disponibilidad y flexibilidad.",
+      "Desplegué y gestioné servicios en contenedores en AWS con ECS y ECR, construyendo pipelines de CI/CD para entregas confiables entre entornos.",
     "RECENT_WORKS.CODEX.3":
-      "Implementé soluciones backend robustas y escalables utilizando microservidores con AWS Lambda y API Gateway, aprovechando la infraestructura en la nube para mejorar la eficiencia y la escalabilidad.",
+      "Implementé soluciones backend utilizando microservicios con AWS Lambda y API Gateway, aprovechando la infraestructura cloud para eficiencia y escalabilidad.",
     "RECENT_WORKS.CODEX.4":
       "Desarrollé y mantuve servidores utilizando Python, aprovechando su versatilidad y efectividad en la implementación de lógica empresarial.",
     "RECENT_WORKS.CODEX.5":
       "Contribuí al desarrollo de servicios utilizando NestJS, asegurando una arquitectura robusta y modular para las aplicaciones backend.",
     "RECENT_WORKS.CODEX.6":
-      "Implementé mejores prácticas de desarrollo para asegurar la optimización y el rendimiento de las aplicaciones, mejorando la eficiencia y la experiencia del usuario.",
+      "Apliqué mejores prácticas de desarrollo para asegurar la optimización y el rendimiento de las aplicaciones, mejorando la eficiencia y la experiencia del usuario.",
     "RECENT_WORKS.CODEX.7":
-      "Trabajé en estrecha colaboración con equipos multifuncionales para asegurar una integración efectiva de los componentes frontend y backend, garantizando la consistencia y eficacia del producto final.",
+      "Trabajé en estrecha colaboración con equipos multifuncionales para asegurar una integración efectiva de los componentes frontend y backend.",
 
     "RECENT_WORKS.CLINPAYS.1":
-      "Supervisión y coordinación de nuevos desarrollos, asegurando su alineación con los objetivos estratégicos de la empresa.",
+      "Lideré el equipo de desarrollo, supervisando y coordinando nuevas funcionalidades alineadas con los objetivos estratégicos de la empresa.",
     "RECENT_WORKS.CLINPAYS.2":
-      "Implementación y monitoreo de mantenimiento preventivo y correctivo para garantizar la estabilidad y eficiencia de los sistemas.",
+      "Ejecuté integraciones con múltiples entidades financieras en Honduras, habilitando el procesamiento de pagos en tiempo real y la conciliación de cuentas.",
     "RECENT_WORKS.CLINPAYS.3":
-      "Responsable de la gestión integral de los servidores de CLINPAYS, así como de los servidores asociados con proyectos adicionales.",
+      "Implementé flujos de KYC y autenticación 3DS en colaboración con Banco BAC Honduras, cumpliendo con los requisitos regulatorios y de seguridad.",
     "RECENT_WORKS.CLINPAYS.4":
-      "Implementación de medidas de seguridad y optimización para asegurar un entorno de servidor robusto y confiable.",
+      "Participé en el equipo de cumplimiento PCI DSS, contribuyendo a controles de seguridad, auditorías y aplicación de políticas para la plataforma de pagos.",
     "RECENT_WORKS.CLINPAYS.5":
-      "Colaboración activa como parte del equipo de desarrollo de la API de pagos, contribuyendo al diseño, implementación y mejora continua de esta interfaz esencial.",
+      "Gestioné la infraestructura de servidores de CLINPAYS y proyectos asociados, implementando medidas de seguridad y optimizaciones de rendimiento.",
     "RECENT_WORKS.CLINPAYS.6":
-      "Lideré el desarrollo e implementación de un orquestador de cobros, estableciendo conexiones efectivas con bancos y billeteras electrónicas.",
+      "Lideré el diseño e implementación de un orquestador de cobros, estableciendo integraciones efectivas con bancos y billeteras electrónicas.",
 
     "CURRICULUM.TITLE": "Hoja de vida",
     "CURRICULUM.SUMMARY.TITLE": "Resumen",
