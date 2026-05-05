@@ -1,0 +1,99 @@
+---
+interface Labels {
+  context: string;
+  role: string;
+  contributions: string;
+  challenges: string;
+  results: string;
+}
+
+interface Props {
+  context: string;
+  role: string;
+  contributions: string[];
+  challenges: string[];
+  results: string[];
+  tags?: string[];
+  labels: Labels;
+}
+
+const { context, role, contributions, challenges, results, tags = [], labels } = Astro.props;
+
+const highlight = (text: string): string => {
+  if (!tags.length) return text;
+  const sorted = [...tags].sort((a, b) => b.length - a.length);
+  let result = text;
+  for (const tag of sorted) {
+    const escaped = tag.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    result = result.replace(
+      new RegExp(escaped, "gi"),
+      (match) => `<span class="text-orange-400 font-medium">${match}</span>`
+    );
+  }
+  return result;
+};
+---
+
+<div class="space-y-4 py-1">
+
+  <div>
+    <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-1.5">
+      <i class="fa fa-solid fa-circle-info text-[9px]"></i>
+      {labels.context}
+    </p>
+    <p class="text-sm text-white leading-relaxed">{context}</p>
+  </div>
+
+  <div class="border-t border-gray-700"></div>
+
+  <div>
+    <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-1.5">
+      <i class="fa fa-solid fa-user text-[9px]"></i>
+      {labels.role}
+    </p>
+    <p class="text-sm text-white leading-relaxed">{role}</p>
+  </div>
+
+  <div class="border-t border-gray-700"></div>
+
+  <div>
+    <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-1.5">
+      <i class="fa fa-solid fa-star text-[9px]"></i>
+      {labels.contributions}
+    </p>
+    <ul class="list-disc ml-4 space-y-1.5">
+      {contributions.map((c) => (
+        <li class="text-sm text-white leading-relaxed" set:html={highlight(c)} />
+      ))}
+    </ul>
+  </div>
+
+  <div class="border-t border-gray-700"></div>
+
+  <div>
+    <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-1.5">
+      <i class="fa fa-solid fa-bolt text-[9px]"></i>
+      {labels.challenges}
+    </p>
+    <ul class="list-disc ml-4 space-y-1.5">
+      {challenges.map((c) => (
+        <li class="text-sm text-white leading-relaxed">{c}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="border-t border-gray-700"></div>
+
+  <div>
+    <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-1.5">
+      <i class="fa fa-solid fa-chart-line text-[9px]"></i>
+      {labels.results}
+    </p>
+    <ul class="list-disc ml-4 space-y-1.5">
+      {results.map((r) => (
+        <li class="text-sm text-white leading-relaxed">{r}</li>
+      ))}
+    </ul>
+  </div>
+
+</div>

@@ -29,46 +29,79 @@ export const ui = {
     "SKILLS.CATEGORY.OTHERS": "Others",
 
     "RECENT_WORKS.TITLE": "Recent Works",
+    "RECENT_WORKS.CODEX_2.CONTEXT":
+      "Modernization of legacy applications and development of new interfaces in a microservices-based environment.",
+    "RECENT_WORKS.CODEX_2.ROLE":
+      "FullStack development focused on modern frontend and legacy system transition.",
+    "RECENT_WORKS.CODEX_2.CHALLENGE.1": "Migrating without breaking existing functionality in a complex legacy codebase",
+    "RECENT_WORKS.CODEX_2.CHALLENGE.2": "Coexistence of legacy and modern technologies within the same application",
+    "RECENT_WORKS.CODEX_2.CHALLENGE.3": "Coordination between modern frontend and distributed .NET backend",
+    "RECENT_WORKS.CODEX_2.RESULT.1": "Modernized and scalable frontend foundation",
+    "RECENT_WORKS.CODEX_2.RESULT.2": "Reduced dependency on legacy technology",
+    "RECENT_WORKS.CODEX_2.RESULT.3": "Improved team development velocity",
+
     "RECENT_WORKS.CODEX_2.1":
-      "Contributing to the migration of legacy ASPX views to VueJS, rebuilding UI components to modern standards while preserving business logic and ensuring zero regression.",
+      "Progressive migration of legacy ASPX views to Vue.js, preserving existing business logic and preventing regressions.",
     "RECENT_WORKS.CODEX_2.2":
-      "Developing new frontend views using VueJS and NuxtJS based on client requirements, translating design specifications into responsive and maintainable components.",
+      "Development of new interfaces with Vue.js and Nuxt.js based on Figma designs and modern tools such as Lovable.",
     "RECENT_WORKS.CODEX_2.3":
-      "Integrating frontend components with .NET backend microservices via REST APIs, managing data flow and state across complex multi-service architectures.",
+      "Integration with .NET backend microservices via REST APIs, managing complex states and data flows.",
     "RECENT_WORKS.CODEX_2.4":
-      "Maintaining and improving legacy ASPX modules, focusing on stability and preparing them for phased migration to the modern VueJS stack.",
+      "Refactoring and maintenance of legacy modules to ensure stability throughout the migration process.",
     "RECENT_WORKS.CODEX_2.5":
-      "Collaborating closely with designers, QA, and backend developers to deliver consistent, high-quality product increments in an agile environment.",
-    "RECENT_WORKS.CODEX_2.6":
-      "Applying reusable component architecture and version control best practices to improve team velocity and long-term maintainability.",
+      "Implementation of reusable component architecture to improve maintainability and development velocity.",
+
+    "RECENT_WORKS.CODEX.CONTEXT":
+      "Development of web and mobile applications alongside deployment on cloud infrastructure.",
+    "RECENT_WORKS.CODEX.ROLE":
+      "FullStack developer contributing to web and mobile applications, cloud infrastructure, and backend services.",
+    "RECENT_WORKS.CODEX.CHALLENGE.1": "Adapting native code to a cross-platform architecture",
+    "RECENT_WORKS.CODEX.CHALLENGE.2": "Managing cloud infrastructure and automated deployments",
+    "RECENT_WORKS.CODEX.CHALLENGE.3": "Integration across multiple distributed services",
+    "RECENT_WORKS.CODEX.RESULT.1": "Reduced mobile maintenance effort through a unified codebase",
+    "RECENT_WORKS.CODEX.RESULT.2": "Faster and more consistent deliveries through CI/CD automation",
+    "RECENT_WORKS.CODEX.RESULT.3": "More scalable and automated cloud infrastructure",
 
     "RECENT_WORKS.CODEX.1":
-      "Developed interactive and efficient user interfaces using React Native, ReactJS and VueJS, ensuring a fluid and engaging user experience.",
+      "Migration of native mobile applications (Android/iOS) to React Native, unifying the codebase and reducing maintenance overhead.",
     "RECENT_WORKS.CODEX.2":
-      "Deployed and managed containerized services on AWS using ECS and ECR, building CI/CD pipelines for reliable delivery across environments.",
+      "Implementation of CI/CD pipelines with GitHub Actions to automate deployments.",
     "RECENT_WORKS.CODEX.3":
-      "Implemented backend solutions using microservices with AWS Lambda and API Gateway, leveraging cloud infrastructure for efficiency and scalability.",
+      "Deployment of containerized services using Kubernetes, AWS ECS, and ECR.",
     "RECENT_WORKS.CODEX.4":
-      "Developed and maintained servers using Python, taking advantage of its versatility and effectiveness in implementing business logic.",
+      "Development of microservices with AWS Lambda and API Gateway.",
     "RECENT_WORKS.CODEX.5":
-      "Contributed to the development of services using NestJS, ensuring a robust and modular architecture for backend applications.",
-    "RECENT_WORKS.CODEX.6":
-      "Applied development best practices to ensure application optimization and performance, improving efficiency and user experience.",
-    "RECENT_WORKS.CODEX.7":
-      "Worked closely with cross-functional teams to ensure effective integration of frontend and backend components.",
+      "Backend implementation with Node.js (NestJS) and Python for business logic.",
+
+    "RECENT_WORKS.CLINPAYS.CONTEXT":
+      "Development of Paygate, a national payment gateway integrated with multiple banks and electronic wallets in Honduras.",
+    "RECENT_WORKS.CLINPAYS.ROLE":
+      "Led the development team, coordinating new feature implementation aligned with strategic business objectives.",
 
     "RECENT_WORKS.CLINPAYS.1":
-      "Led the development team, supervising and coordinating new features aligned with the company's strategic objectives.",
+      "Designed and implemented a payments orchestrator that dynamically routes transactions to the optimal bank or provider based on card BIN and commission rates.",
     "RECENT_WORKS.CLINPAYS.2":
-      "Delivered integrations with multiple financial entities in Honduras, enabling real-time payment processing and account reconciliation.",
+      "Integrated multiple financial entities in Honduras, enabling real-time payment processing and automated account reconciliation.",
     "RECENT_WORKS.CLINPAYS.3":
-      "Implemented KYC and 3DS authentication flows in partnership with Banco BAC Honduras, meeting regulatory and security compliance requirements.",
+      "Implemented KYC and 3DS authentication flows with Banco BAC Honduras, meeting regulatory and security compliance requirements.",
     "RECENT_WORKS.CLINPAYS.4":
-      "Participated in the PCI DSS compliance team, contributing to security controls, audits, and policy enforcement for the payments platform.",
+      "Participated in PCI DSS compliance processes, including security controls, internal audits, and policy enforcement for the platform.",
     "RECENT_WORKS.CLINPAYS.5":
-      "Managed CLINPAYS server infrastructure and associated projects, implementing security hardening and performance optimizations.",
-    "RECENT_WORKS.CLINPAYS.6":
-      "Led the design and implementation of a collections orchestrator, establishing effective integrations with banks and electronic wallets.",
+      "Administered server infrastructure for the Paygate platform, applying security hardening and performance optimizations.",
+
+    "RECENT_WORKS.CLINPAYS.CHALLENGE.1": "Managing multiple banking integrations with different behaviors and protocols",
+    "RECENT_WORKS.CLINPAYS.CHALLENGE.2": "Ensuring high availability and reliability in financial transaction processing",
+    "RECENT_WORKS.CLINPAYS.CHALLENGE.3": "Meeting PCI DSS and regulatory security standards for payment platforms",
+
+    "RECENT_WORKS.CLINPAYS.RESULT.1": "Platform capable of intelligently routing transactions based on card BIN and commission optimization",
+    "RECENT_WORKS.CLINPAYS.RESULT.2": "Improved stability and reliability in payment processing across multiple financial entities",
+    "RECENT_WORKS.CLINPAYS.RESULT.3": "Scalable architecture ready to integrate new banking providers and payment methods",
+
+    "RECENT_WORKS.SECTION.CONTEXT": "Context",
+    "RECENT_WORKS.SECTION.ROLE": "Role",
+    "RECENT_WORKS.SECTION.CONTRIBUTIONS": "Key Contributions",
+    "RECENT_WORKS.SECTION.CHALLENGES": "Technical Challenges",
+    "RECENT_WORKS.SECTION.RESULTS": "Results",
 
     "CURRICULUM.TITLE": "Curriculum Vitae",
     "CURRICULUM.SUMMARY.TITLE": "Summary",
@@ -114,46 +147,79 @@ export const ui = {
     "SKILLS.CATEGORY.OTHERS": "Otros",
 
     "RECENT_WORKS.TITLE": "Trabajos Recientes",
+    "RECENT_WORKS.CODEX_2.CONTEXT":
+      "Modernización de aplicaciones legacy y desarrollo de nuevas interfaces en un entorno basado en microservicios.",
+    "RECENT_WORKS.CODEX_2.ROLE":
+      "Desarrollo FullStack enfocado en frontend moderno y transición de sistemas legacy.",
+    "RECENT_WORKS.CODEX_2.CHALLENGE.1": "Migrar sin romper funcionalidad existente en una base de código legacy compleja",
+    "RECENT_WORKS.CODEX_2.CHALLENGE.2": "Coexistencia de tecnologías legacy y modernas dentro de la misma aplicación",
+    "RECENT_WORKS.CODEX_2.CHALLENGE.3": "Coordinación entre frontend moderno y backend .NET distribuido",
+    "RECENT_WORKS.CODEX_2.RESULT.1": "Base frontend modernizada y escalable",
+    "RECENT_WORKS.CODEX_2.RESULT.2": "Menor dependencia de tecnología legacy",
+    "RECENT_WORKS.CODEX_2.RESULT.3": "Mayor velocidad de desarrollo del equipo",
+
     "RECENT_WORKS.CODEX_2.1":
-      "Contribuyendo a la migración de vistas ASPX legacy a VueJS, reconstruyendo componentes de UI con estándares modernos y asegurando cero regresiones en el proceso.",
+      "Migración progresiva de vistas ASPX legacy a Vue.js, preservando la lógica de negocio existente y previniendo regresiones.",
     "RECENT_WORKS.CODEX_2.2":
-      "Desarrollando nuevas vistas frontend con VueJS y NuxtJS según los requerimientos del cliente, traduciendo especificaciones de diseño en componentes responsivos y mantenibles.",
+      "Desarrollo de nuevas interfaces con Vue.js y Nuxt.js basadas en diseños de Figma y herramientas modernas como Lovable.",
     "RECENT_WORKS.CODEX_2.3":
-      "Integrando componentes frontend con microservicios backend .NET a través de REST APIs, gestionando flujo de datos y estado en arquitecturas multi-servicio.",
+      "Integración con microservicios backend .NET a través de REST APIs, gestionando estados complejos y flujos de datos.",
     "RECENT_WORKS.CODEX_2.4":
-      "Manteniendo y mejorando módulos ASPX legacy, enfocándome en la estabilidad y preparándolos para la migración gradual al stack moderno de VueJS.",
+      "Refactorización y mantenimiento de módulos legacy para garantizar estabilidad durante el proceso de migración.",
     "RECENT_WORKS.CODEX_2.5":
-      "Colaborando con diseñadores, QA y desarrolladores backend para entregar incrementos de producto consistentes y de alta calidad en un entorno ágil.",
-    "RECENT_WORKS.CODEX_2.6":
-      "Aplicando arquitectura de componentes reutilizables y buenas prácticas de control de versiones para mejorar la velocidad del equipo y la mantenibilidad a largo plazo.",
+      "Implementación de arquitectura de componentes reutilizables para mejorar la mantenibilidad y velocidad de desarrollo.",
+
+    "RECENT_WORKS.CODEX.CONTEXT":
+      "Desarrollo de aplicaciones web y móviles junto con despliegue en infraestructura cloud.",
+    "RECENT_WORKS.CODEX.ROLE":
+      "Desarrollador FullStack contribuyendo a aplicaciones web y móviles, infraestructura cloud y servicios backend.",
+    "RECENT_WORKS.CODEX.CHALLENGE.1": "Adaptar código nativo a una arquitectura multiplataforma",
+    "RECENT_WORKS.CODEX.CHALLENGE.2": "Gestionar infraestructura cloud y despliegues automatizados",
+    "RECENT_WORKS.CODEX.CHALLENGE.3": "Integración entre múltiples servicios distribuidos",
+    "RECENT_WORKS.CODEX.RESULT.1": "Menor esfuerzo de mantenimiento móvil a través de una base de código unificada",
+    "RECENT_WORKS.CODEX.RESULT.2": "Entregas más rápidas y consistentes mediante automatización CI/CD",
+    "RECENT_WORKS.CODEX.RESULT.3": "Infraestructura cloud más escalable y automatizada",
 
     "RECENT_WORKS.CODEX.1":
-      "Desarrollé interfaces de usuario interactivas y eficientes utilizando React Native, ReactJS y VueJS, asegurando una experiencia de usuario fluida y atractiva.",
+      "Migración de aplicaciones móviles nativas (Android/iOS) a React Native, unificando la base de código y reduciendo la carga de mantenimiento.",
     "RECENT_WORKS.CODEX.2":
-      "Desplegué y gestioné servicios en contenedores en AWS con ECS y ECR, construyendo pipelines de CI/CD para entregas confiables entre entornos.",
+      "Implementación de pipelines CI/CD con GitHub Actions para automatizar despliegues.",
     "RECENT_WORKS.CODEX.3":
-      "Implementé soluciones backend utilizando microservicios con AWS Lambda y API Gateway, aprovechando la infraestructura cloud para eficiencia y escalabilidad.",
+      "Despliegue de servicios en contenedores usando Kubernetes, AWS ECS y ECR.",
     "RECENT_WORKS.CODEX.4":
-      "Desarrollé y mantuve servidores utilizando Python, aprovechando su versatilidad y efectividad en la implementación de lógica empresarial.",
+      "Desarrollo de microservicios con AWS Lambda y API Gateway.",
     "RECENT_WORKS.CODEX.5":
-      "Contribuí al desarrollo de servicios utilizando NestJS, asegurando una arquitectura robusta y modular para las aplicaciones backend.",
-    "RECENT_WORKS.CODEX.6":
-      "Apliqué mejores prácticas de desarrollo para asegurar la optimización y el rendimiento de las aplicaciones, mejorando la eficiencia y la experiencia del usuario.",
-    "RECENT_WORKS.CODEX.7":
-      "Trabajé en estrecha colaboración con equipos multifuncionales para asegurar una integración efectiva de los componentes frontend y backend.",
+      "Implementación backend con Node.js (NestJS) y Python para lógica de negocio.",
+
+    "RECENT_WORKS.CLINPAYS.CONTEXT":
+      "Desarrollo de Paygate, una pasarela de pagos nacional integrada con múltiples bancos y billeteras electrónicas en Honduras.",
+    "RECENT_WORKS.CLINPAYS.ROLE":
+      "Lideré el equipo de desarrollo, coordinando la implementación de nuevas funcionalidades alineadas con los objetivos estratégicos del negocio.",
 
     "RECENT_WORKS.CLINPAYS.1":
-      "Lideré el equipo de desarrollo, supervisando y coordinando nuevas funcionalidades alineadas con los objetivos estratégicos de la empresa.",
+      "Diseñé e implementé un orquestador de pagos capaz de seleccionar dinámicamente el banco o proveedor basado en el BIN de la tarjeta y las comisiones.",
     "RECENT_WORKS.CLINPAYS.2":
-      "Ejecuté integraciones con múltiples entidades financieras en Honduras, habilitando el procesamiento de pagos en tiempo real y la conciliación de cuentas.",
+      "Integré múltiples entidades financieras en Honduras, habilitando el procesamiento de pagos en tiempo real y la conciliación automática de cuentas.",
     "RECENT_WORKS.CLINPAYS.3":
-      "Implementé flujos de KYC y autenticación 3DS en colaboración con Banco BAC Honduras, cumpliendo con los requisitos regulatorios y de seguridad.",
+      "Implementé flujos de autenticación KYC y 3DS en conjunto con Banco BAC Honduras, cumpliendo los requisitos regulatorios y de seguridad.",
     "RECENT_WORKS.CLINPAYS.4":
-      "Participé en el equipo de cumplimiento PCI DSS, contribuyendo a controles de seguridad, auditorías y aplicación de políticas para la plataforma de pagos.",
+      "Participé en procesos de cumplimiento PCI DSS, incluyendo controles de seguridad, auditorías internas y políticas de la plataforma.",
     "RECENT_WORKS.CLINPAYS.5":
-      "Gestioné la infraestructura de servidores de CLINPAYS y proyectos asociados, implementando medidas de seguridad y optimizaciones de rendimiento.",
-    "RECENT_WORKS.CLINPAYS.6":
-      "Lideré el diseño e implementación de un orquestador de cobros, estableciendo integraciones efectivas con bancos y billeteras electrónicas.",
+      "Administré la infraestructura de servidores de la plataforma Paygate, aplicando mejoras de seguridad y optimización de rendimiento.",
+
+    "RECENT_WORKS.CLINPAYS.CHALLENGE.1": "Manejo de múltiples integraciones bancarias con comportamientos y protocolos distintos",
+    "RECENT_WORKS.CLINPAYS.CHALLENGE.2": "Garantizar alta disponibilidad y confiabilidad en el procesamiento de transacciones financieras",
+    "RECENT_WORKS.CLINPAYS.CHALLENGE.3": "Cumplimiento de estándares PCI DSS y requisitos regulatorios para plataformas de pago",
+
+    "RECENT_WORKS.CLINPAYS.RESULT.1": "Plataforma capaz de enrutar transacciones de forma inteligente según el BIN de tarjeta y optimización de comisiones",
+    "RECENT_WORKS.CLINPAYS.RESULT.2": "Mayor estabilidad y confiabilidad en el procesamiento de pagos con múltiples entidades financieras",
+    "RECENT_WORKS.CLINPAYS.RESULT.3": "Arquitectura escalable lista para integrar nuevos proveedores bancarios y métodos de pago",
+
+    "RECENT_WORKS.SECTION.CONTEXT": "Contexto",
+    "RECENT_WORKS.SECTION.ROLE": "Rol",
+    "RECENT_WORKS.SECTION.CONTRIBUTIONS": "Aportes Clave",
+    "RECENT_WORKS.SECTION.CHALLENGES": "Retos Técnicos",
+    "RECENT_WORKS.SECTION.RESULTS": "Resultados",
 
     "CURRICULUM.TITLE": "Hoja de vida",
     "CURRICULUM.SUMMARY.TITLE": "Resumen",
