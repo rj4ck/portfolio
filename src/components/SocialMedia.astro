@@ -1,0 +1,40 @@
+---
+const SOCIAL_MEDIA_LINKS = [
+  {
+    name: "LinkedIn",
+    icon: "linkedin-in",
+    url: "https://www.linkedin.com/in/raquel-jackson",
+  },
+  {
+    name: "GitHub",
+    icon: "github",
+    url: "https://github.com/rj4ck",
+  },
+  {
+    name: "Discord",
+    icon: "discord",
+    url: "https://discord.com/users/rj4ck",
+  },
+];
+---
+
+<div class="flex justify-center gap-3">
+  {
+    SOCIAL_MEDIA_LINKS.map((media) => (
+      <a
+        href={media.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={media.name}
+        class="group flex flex-col items-center gap-1.5"
+      >
+        <div class="w-10 h-10 rounded-xl border border-gray-700 bg-gray-800 flex items-center justify-center text-gray-400 group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:text-orange-400 group-hover:-translate-y-0.5 transition-all duration-200">
+          <i class={`fa-brands fa-${media.icon} text-base`} />
+        </div>
+        <span class="text-[10px] text-gray-600 group-hover:text-orange-400 transition-colors duration-200">
+          {media.name}
+        </span>
+      </a>
+    ))
+  }
+</div>

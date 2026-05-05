@@ -1,46 +1,90 @@
 ---
-import DevIcon from "./icons/DevIcon";
-
 interface Links {
-    url: string;
-    name: string;
+  url: string;
+  name: string;
 }
 interface Props {
-    role: string;
-    title: string;
-    image: string;
-    tags: string[];
-    links?: Links[];
-    description: string;
+  title: string;
+  icon?: string;
+  createdDate?: string;
+  tags?: string[];
+  links?: Links[];
+  description: string;
+  featured?: boolean;
 }
 
-const { role, image, tags, title, links, description } = Astro.props;
+const {
+  title,
+  icon = "fa-code",
+  createdDate,
+  tags,
+  links,
+  description,
+  featured = false,
+} = Astro.props;
+const year = createdDate ? new Date(createdDate).getFullYear() : null;
 ---
-<div class="rounded-md border-[0.05rem] group relative block bg-white hover:bg-gray-800 hover:text-white hover:cursor-pointer shadow-md transition hover:border-orange-500/50 hover:shadow-orange-500/50">
-    <div class="flex items-start gap-4 p-3 sm:p-5 lg:p-7">
-        <a href="#" class="block shrink-0">
-            <DevIcon />
-        </a>
 
-        <div>
-            <h3 class="font-medium sm:text-lg">
-                <a href="#" class="hover:underline"> {title} </a>
-            </h3>
+<div
+  class={`group rounded-xl border border-gray-700 bg-gray-900 shadow-lg hover:shadow-orange-500/20 hover:border-orange-500/40 hover:-translate-y-0.5 transition-all duration-300 flex overflow-hidden h-full ${featured ? "flex-row" : "flex-col"}`}
+>
+  {
+    featured && (
+      <div class="w-1 shrink-0 bg-gradient-to-b from-orange-500/80 via-orange-400/40 to-transparent" />
+    )
+  }
 
-            <p class="text-sm my-1">
-                {description}
-            </p>
-
-            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-                <p class="line-clamp-2 text-sm mt-2">
-                    {links && links.map((link: Links) => (
-                      <a role="button" href={link.url} target="_blank" class="text-[0.7rem] no-underline hover:underline mr-2">
-                          {link.name}
-                      </a>
-                    ))}
-                </p>
-            </div>
-
+  <div class={`flex flex-col flex-1 ${featured ? "p-6" : "p-5"}`}>
+    <div class="flex items-start justify-between gap-3 mb-3">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-9 h-9 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center shrink-0"
+        >
+          <i class={`fa fa-solid ${icon} text-orange-400 text-sm`}></i>
         </div>
+        <div>
+          <h3 class={`text-white font-semibold leading-snug ${featured ? "text-lg" : "text-base"}`}>
+            {title}
+          </h3>
+          {year && <span class="text-[10px] text-gray-600 font-mono">{year}</span>}
+        </div>
+      </div>
     </div>
+
+    <p
+      class={`text-gray-400 text-sm leading-relaxed flex-1 ${featured ? "line-clamp-3" : "line-clamp-2"}`}
+    >
+      {description}
+    </p>
+
+    {
+      tags && tags.length > 0 && (
+        <div class="flex flex-wrap gap-1.5 mt-3">
+          {tags.map((tag) => (
+            <span class="px-2 py-0.5 rounded-md bg-gray-800 border border-gray-700 text-orange-400 text-xs font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )
+    }
+
+    {
+      links && links.length > 0 && (
+        <div class="flex gap-2 mt-4">
+          {links.map((link: Links) => (
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-800 border border-gray-700 text-gray-300 text-xs font-medium hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fa fa-solid fa-arrow-up-right-from-square text-[0.6rem]" />
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </div>
 </div>

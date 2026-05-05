@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  role: string;
+  location: string;
+  collaborator?: string;
+  tags?: string[];
+  description: string;
+}
+
+const { title, role, location, collaborator, tags, description } = Astro.props;
+---
+
+<div class="group py-7 border-b border-gray-800 last:border-0">
+  <div class="mb-2">
+    <div class="flex flex-wrap items-start justify-between gap-2">
+      <h3
+        class="text-2xl sm:text-4xl font-bold text-gray-600 group-hover:text-white transition-colors duration-500 leading-tight"
+      >
+        {title}
+      </h3>
+      <span class="text-orange-400 text-xs sm:text-sm font-medium shrink-0 mt-1">{role}</span>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap gap-x-5 gap-y-1 text-gray-600 text-xs mb-4">
+    <span class="flex items-center gap-1.5">
+      <i class="fa fa-solid fa-location-dot"></i>
+      {location}
+    </span>
+    {
+      collaborator && (
+        <span class="flex items-center gap-1.5">
+          <i class="fa fa-solid fa-user" />
+          {collaborator}
+        </span>
+      )
+    }
+  </div>
+
+  <p class="text-gray-400 text-sm leading-relaxed max-w-2xl">{description}</p>
+
+  {
+    tags && tags.length > 0 && (
+      <div class="flex flex-wrap gap-1.5 mt-4">
+        {tags.map((tag) => (
+          <span class="px-2 py-0.5 rounded-md bg-gray-800 border border-gray-700 text-orange-400 text-xs font-medium">
+            {tag}
+          </span>
+        ))}
+      </div>
+    )
+  }
+</div>

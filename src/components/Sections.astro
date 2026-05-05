@@ -1,19 +1,18 @@
 ---
-import Divider from "./Divider";
+import Divider from "./Divider.astro";
 interface Props {
-    title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
-<section class="text-gray-800">
-    <div class="max-w-screen-xl pb-4 sm:pb-6 lg:pb-8">
-        <div class="max-w-xl">
-            <h2 class="text-3xl font-bold sm:text-4xl">{title}</h2>
-        </div>
-    </div>
 
-    <slot />
+<section class="text-gray-100 py-12">
+  <div class="max-w-screen-xl pb-10">
+    <h2 class="text-3xl font-bold sm:text-4xl">{title}</h2>
+  </div>
 
-    <Divider />
+  <slot />
+
+  <Divider />
 </section>

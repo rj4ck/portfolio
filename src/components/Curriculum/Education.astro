@@ -1,0 +1,25 @@
+---
+import Divider from "../Divider.astro";
+
+const items = await Astro.glob("../../content/education/*.md");
+const sorted = items.sort((a, b) => a.frontmatter.order - b.frontmatter.order);
+---
+
+<div class="mt-2 space-y-1">
+  {
+    sorted.map((item) => {
+      const { title, school, startDate, endDate, location } = item.frontmatter;
+      const dateRange = endDate ? `${startDate} — ${endDate}` : `${startDate} — Present`;
+      return (
+        <div class="grid grid-cols-[1fr_auto] items-baseline gap-x-4 py-1.5 border-b border-gray-100 last:border-0">
+          <div>
+            <p class="text-sm font-semibold">{title}</p>
+            <p class="text-sm text-orange-500">{school}</p>
+            <p class="text-xs text-gray-500">{location}</p>
+          </div>
+          <p class="text-xs text-gray-400 whitespace-nowrap">{dateRange}</p>
+        </div>
+      );
+    })
+  }
+</div>

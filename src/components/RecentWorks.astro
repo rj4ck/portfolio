@@ -1,0 +1,94 @@
+---
+import CodexIcon from "./icons/CodexIcon.tsx";
+import ClinpaysIcon from "./icons/ClinpaysIcon.tsx";
+import ProjectList from "./ProjectList.astro";
+import TimeLine from "./TimeLine.astro";
+import { useTranslations } from "../i18n/utils";
+
+interface Props {
+  lang?: string;
+  showTimeline?: boolean;
+}
+
+const { lang = "en", showTimeline } = Astro.props;
+const t = useTranslations(lang as "en" | "es");
+---
+
+<div
+  class={`space-y-8 relative ${!showTimeline ? "" : "before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-600 before:to-transparent"}`}
+>
+  <TimeLine
+    showTimeline={showTimeline}
+    startDate="10/2024"
+    location="Austin, Texas"
+    date="Oct 2024"
+    title="Code ÉXITOS"
+    subtitle="Software Engineer 2"
+  >
+    <CodexIcon slot="icon" />
+    <ProjectList
+      showTimeline={showTimeline}
+      title=""
+      tags={["VueJS", "NuxtJS", ".NET", "ASPX", "REST APIs"]}
+      details={[
+        t("RECENT_WORKS.CODEX_2.1"),
+        t("RECENT_WORKS.CODEX_2.2"),
+        t("RECENT_WORKS.CODEX_2.3"),
+        t("RECENT_WORKS.CODEX_2.4"),
+        t("RECENT_WORKS.CODEX_2.5"),
+        t("RECENT_WORKS.CODEX_2.6"),
+      ]}
+    />
+  </TimeLine>
+
+  <TimeLine
+    showTimeline={showTimeline}
+    startDate="02/2022"
+    endDate="01/2024"
+    location="San Pedro Sula, Honduras"
+    date="Feb 1, 2022"
+    title="Code ÉXITOS"
+    subtitle="Software Developer"
+  >
+    <CodexIcon slot="icon" />
+    <ProjectList
+      showTimeline={showTimeline}
+      title=""
+      tags={["ReactJS", "React Native", "VueJS"]}
+      details={[
+        t("RECENT_WORKS.CODEX.1"),
+        t("RECENT_WORKS.CODEX.2"),
+        t("RECENT_WORKS.CODEX.3"),
+        t("RECENT_WORKS.CODEX.4"),
+        t("RECENT_WORKS.CODEX.5"),
+        t("RECENT_WORKS.CODEX.6"),
+        t("RECENT_WORKS.CODEX.7"),
+      ]}
+    />
+  </TimeLine>
+
+  <TimeLine
+    showTimeline={showTimeline}
+    startDate="11/2014"
+    endDate="02/2024"
+    location="San Pedro Sula, Honduras"
+    date="Nov 14, 2014"
+    title="Clinpays"
+    subtitle="Lead Developer"
+  >
+    <ClinpaysIcon slot="icon" />
+    <ProjectList
+      showTimeline={showTimeline}
+      title=""
+      tags={["strategic", "coordination", "maintenance"]}
+      details={[
+        t("RECENT_WORKS.CLINPAYS.1"),
+        t("RECENT_WORKS.CLINPAYS.2"),
+        t("RECENT_WORKS.CLINPAYS.3"),
+        t("RECENT_WORKS.CLINPAYS.4"),
+        t("RECENT_WORKS.CLINPAYS.5"),
+        t("RECENT_WORKS.CLINPAYS.6"),
+      ]}
+    />
+  </TimeLine>
+</div>

@@ -1,0 +1,66 @@
+---
+type TechnicalSkill = {
+  title: string;
+  years: string;
+};
+
+interface Props {
+  title?: string;
+  skills: TechnicalSkill[];
+}
+
+const { title, skills = [] } = Astro.props;
+
+function getLevel(years: string): number {
+  if (years.startsWith("+")) return 5;
+  const num = parseFloat(years);
+  if (num < 1) return 1;
+  if (num <= 1) return 2;
+  if (num <= 2) return 3;
+  if (num <= 3) return 4;
+  return 5;
+}
+
+function getCategoryIcon(category: string): string {
+  const lower = category?.toLowerCase();
+  if (lower === "frontend") return "fa-display";
+  if (lower === "backend") return "fa-server";
+  if (lower === "databases") return "fa-database";
+  return "fa-layer-group";
+}
+
+const icon = getCategoryIcon(title ?? "");
+---
+
+<div
+  class="rounded-xl border border-gray-700 shadow-lg hover:shadow-orange-500/20 hover:border-orange-500/40 transition-all duration-300 overflow-hidden bg-gray-900"
+>
+  <div class="px-5 py-4 flex items-center gap-3 border-b border-gray-700">
+    <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center shrink-0">
+      <i class={`fa fa-solid ${icon} text-orange-400 text-sm`}></i>
+    </div>
+    <h3 class="text-white font-semibold text-base tracking-wide">
+      {title ?? "Skills"}
+    </h3>
+  </div>
+
+  <ul class="px-5 py-4 space-y-3.5">
+    {
+      skills.map((skill) => {
+        const level = getLevel(skill.years);
+        return (
+          <li class="flex items-center justify-between gap-2">
+            <span class="text-gray-300 text-sm font-medium">{skill.title}</span>
+            <div class="flex items-center gap-1.5 shrink-0">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <span
+                  class={`w-2 h-2 rounded-full ${i < level ? "bg-orange-400" : "bg-gray-700"}`}
+                />
+              ))}
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>

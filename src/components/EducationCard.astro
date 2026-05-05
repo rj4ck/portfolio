@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  school: string;
+  location: string;
+  startDate: string;
+  endDate?: string;
+  icon?: string;
+}
+
+const { title, school, location, startDate, endDate } = Astro.props;
+
+const startYear = startDate.split("/")[1] ?? startDate;
+const endYear = endDate ? (endDate.split("/")[1] ?? endDate) : "Present";
+---
+
+<div class="flex gap-8 group">
+  <div class="flex flex-col items-center w-14 shrink-0 pt-1">
+    <div class="text-center font-mono text-xs leading-tight">
+      <span class="text-orange-400 font-bold">{endYear}</span>
+      <div class="text-gray-700 my-1">↑</div>
+      <span class="text-gray-500">{startYear}</span>
+    </div>
+    <div class="w-px flex-1 bg-gray-800 mt-3"></div>
+  </div>
+
+  <div class="pb-10 pt-0.5">
+    <h3 class="text-white font-semibold text-base leading-snug">{title}</h3>
+    <p class="text-orange-400 text-sm mt-1">{school}</p>
+    <p class="text-gray-500 text-xs mt-1.5 flex items-center gap-1.5">
+      <i class="fa fa-solid fa-location-dot text-[10px]"></i>
+      {location}
+    </p>
+  </div>
+</div>

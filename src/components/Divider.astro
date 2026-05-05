@@ -1,0 +1,10 @@
+---
+interface Props {
+  margin?: number;
+}
+
+const { margin = 4 } = Astro.props;
+const marginValue = margin * 0.25;
+---
+
+<div style={`margin: ${marginValue}rem 0;`} class="border-t border-gray-800"></div>

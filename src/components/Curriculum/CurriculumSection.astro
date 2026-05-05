@@ -1,0 +1,14 @@
+---
+interface Props {
+  title: string;
+  content?: string;
+}
+---
+
+<div class="mb-4">
+  <p class="text-xl font-semibold uppercase border-b-2 border-black">
+    {Astro.props.title}
+  </p>
+  {Astro.props.content && <p class="pt-1 text-sm">{Astro.props.content}</p>}
+  <slot />
+</div>

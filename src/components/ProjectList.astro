@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+  showTimeline?: boolean;
+  tags?: string[];
+  details: string[];
+}
+
+const { showTimeline, tags = [], title, details = [] } = Astro.props;
+
+const highlightTags = (detail: string): string => {
+  if (!tags.length) return detail;
+
+  // Sort longest first so "React Native" matches before "React"
+  const sorted = [...tags].sort((a, b) => b.length - a.length);
+
+  let result = detail;
+  for (const tag of sorted) {
+    const escaped = tag.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    result = result.replace(
+      new RegExp(escaped, "gi"),
+      (match) => `<span class="text-orange-400 font-medium">${match}</span>`
+    );
+  }
+  return result;
+};
+---
+
+<div class="py-2 border-b border-gray-700 last:border-0 last:pb-0">
+  {showTimeline && <h3 class="text-sm font-bold">{title}</h3>}
+  <ul class="list-disc ml-6 text-sm">
+    {details.map((detail) => <li set:html={highlightTags(detail)} />)}
+  </ul>
+</div>

@@ -5,12 +5,6 @@ skills: [{
   title: "AWS"
 }, {
   years: "2y",
-  title: "Firebase"
-}, {
-  years: "+8y",
-  title: "MongoDB"
-}, {
-  years: "2y",
   title: "Parse Server"
 }, {
   years: "-1y",

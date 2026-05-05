@@ -1,85 +1,118 @@
 ---
 import { Image, getImage } from "astro:assets";
-import { ui } from '../i18n/ui';
-
 import avatarImage from "../images/avatar.jpg";
+import { useTranslations } from "../i18n/utils";
 
 const optimizedAvatar = await getImage({ src: avatarImage, format: "webp" });
 
-import { useTranslations } from '../i18n/utils';
-
-
 const { lang } = Astro.params;
-
-//const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang as keyof ui);
+const t = useTranslations(lang as "en" | "es");
 ---
 
 <div class="container mx-auto text-center">
   <div class="mb-8">
     <p class="text-4xl">
-      {t('HERO.MY_GREETING')}
+      {t("HERO.MY_GREETING")}
     </p>
 
     <div class="overflow-hidden mx-auto my-4">
-      <Image class="inline-block m-4 h-40 w-40 rounded-full ring-2 ring-[#FFA500]" width="1600"
-             height="900"
-             loading="lazy"
-             decoding="async" alt={"Avatar"} src={optimizedAvatar.src} />
+      <Image
+        class="inline-block m-4 h-40 w-40 rounded-full ring-2 ring-[#FFA500]"
+        width="1600"
+        height="900"
+        loading="lazy"
+        decoding="async"
+        alt={"Avatar"}
+        src={optimizedAvatar.src}
+      />
     </div>
 
     <p class="text-4xl">
-      {t('HERO.MY_NAME')} <span class="animated-gradient">Raquel Jackson</span>
+      {t("HERO.MY_NAME")}
+      <span class="animated-gradient">Raquel Jackson</span>
     </p>
   </div>
 
   <div class="mb-8 mx-auto max-w-lg">
     <p class="text-base text-gray-300 my-4">
-      {t('HERO.MY_RESUME')}
+      {t("HERO.MY_RESUME")}
     </p>
 
     <p class="text-base text-gray-300 mb-4">
-      {t('HERO.MY_HOBBY')}
+      {t("HERO.MY_HOBBY")}
     </p>
   </div>
 
+  <div class="mb-8 w-full max-w-sm mx-auto">
+    <div class="rounded-xl border border-gray-700/60 bg-gray-800/40 overflow-hidden">
+      <div class="h-px w-full bg-gradient-to-r from-orange-500/70 via-orange-400/30 to-transparent">
+      </div>
+      <div class="px-4 py-3 text-left">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse shrink-0"></span>
+          <span class="text-[10px] text-gray-500 uppercase tracking-widest">
+            {t("HERO.CURRENTLY.LABEL")}
+          </span>
+        </div>
+        <p class="text-sm text-white font-medium leading-snug">
+          {t("HERO.CURRENTLY.ROLE")}
+        </p>
+        <div class="flex flex-wrap gap-1.5 mt-2.5">
+          {
+            t("HERO.CURRENTLY.STACK")
+              .split(" · ")
+              .map((item) => (
+                <span class="px-2 py-0.5 rounded-md bg-gray-900/60 border border-gray-700 text-orange-400 text-[10px] font-medium">
+                  {item.trim()}
+                </span>
+              ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="grid grid-flow-col gap-4 justify-center">
     <a href="https://www.buymeacoffee.com/rj4ck" target="_blank" class="inline-block">
-      <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
-           style="height: 3.15em !important;width: 10em !important;" />
+      <img
+        src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+        alt="Buy Me A Coffee"
+        style="height: 3.15em !important;width: 10em !important;"
+      />
     </a>
 
-    <a href={`curriculum`} target="_blank"
-       class="inline-block rounded border border-orange-600 px-12 py-3 text-sm font-medium text-orange-600 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring active:bg-orange-500">
+    <a
+      href={`curriculum`}
+      target="_blank"
+      class="inline-block rounded border border-orange-600 px-12 py-3 text-sm font-medium text-orange-600 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring active:bg-orange-500"
+    >
       Curriculum
     </a>
   </div>
 </div>
 
 <style>
-
-    @keyframes changeGradient {
-        0% {
-            background-position: 0 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0 50%;
-        }
+  @keyframes changeGradient {
+    0% {
+      background-position: 0 50%;
     }
-
-    .animated-gradient {
-        background: linear-gradient(45deg, #008080, #00ced1, #ffa500, #8b4513);
-        background-size: 400% 400%;
-        animation: changeGradient 10s ease infinite;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    50% {
+      background-position: 100% 50%;
     }
-
-    .image-container {
-        background-color: linear-gradient(to right, var(--turquoise), var(--orange)) 4;
+    100% {
+      background-position: 0 50%;
     }
+  }
+
+  .animated-gradient {
+    background: linear-gradient(45deg, #008080, #00ced1, #ffa500, #8b4513);
+    background-size: 400% 400%;
+    animation: changeGradient 10s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .image-container {
+    background-color: linear-gradient(to right, var(--turquoise), var(--orange)) 4;
+  }
 </style>
