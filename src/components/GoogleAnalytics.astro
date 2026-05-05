@@ -11,8 +11,8 @@ if (isDev || !GA_MEASUREMENT_ID) {
 {!isDev && GA_MEASUREMENT_ID && (
   <>
     <!-- Google Analytics con Partytown -->
-    <script type="text/partytown" async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
-    <script type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
+    <script is:inline type="text/partytown" async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+    <script is:inline type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
