@@ -13,6 +13,7 @@ export const ui = {
       "I'm a fullstack developer specialized in JavaScript. I am passionate about the world of development and I am\nconstantly looking for new projects that allow me to learn and improve my technical skills.",
     "HERO.MY_HOBBY":
       "Outside of work, I enjoy spending time with my friends and exploring new places.",
+    "HERO.AVATAR_ALT": "Raquel Jackson, Full Stack Developer",
 
     "HERO.CURRENTLY.LABEL": "Currently",
     "HERO.CURRENTLY.ROLE": "Software Engineer 2 at Code ÉXITOS",
@@ -136,6 +137,7 @@ export const ui = {
       "Soy un desarrollador fullstack especializado en JavaScript. Me apasiona el mundo del desarrollo y estoy\nconstantemente en búsqueda de nuevos proyectos que me permitan aprender y mejorar mis habilidades técnicas.",
     "HERO.MY_HOBBY":
       "Fuera del trabajo, disfruto pasar tiempo con mis amigos y explorar nuevos lugares.",
+    "HERO.AVATAR_ALT": "Raquel Jackson, Desarrolladora Full Stack",
 
     "HERO.CURRENTLY.LABEL": "Actualmente",
     "HERO.CURRENTLY.ROLE": "Software Engineer 2 en Code ÉXITOS",

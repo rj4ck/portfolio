@@ -13,6 +13,9 @@ const ogImage = new URL(`${import.meta.env.BASE_URL}og-image.jpg`, Astro.site);
 const ogLocale = lang === "es" ? "es_HN" : "en_US";
 const jobTitle = lang === "es" ? "Desarrolladora Full Stack" : "Full Stack Developer";
 
+const enURL = new URL(Astro.url.pathname.replace(/\/(en|es)(\/|$)/, "/en$2"), Astro.site);
+const esURL = new URL(Astro.url.pathname.replace(/\/(en|es)(\/|$)/, "/es$2"), Astro.site);
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -39,6 +42,11 @@ const jsonLd = {
   <meta name="author" content="Raquel Jackson" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href={canonicalURL} />
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="en" href={enURL} />
+  <link rel="alternate" hreflang="es" href={esURL} />
+  <link rel="alternate" hreflang="x-default" href={enURL} />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
