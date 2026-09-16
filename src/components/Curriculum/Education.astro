@@ -1,4 +1,20 @@
 ---
+import { useTranslations } from "../../i18n/utils";
+
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang = "en" } = Astro.props;
+const t = useTranslations(lang);
+
+const TRANSLATION_KEY_BY_FILE: Record<string, string> = {
+  eadic: "EADIC",
+  seda: "SEDA",
+  ujn: "UJN",
+  "unir-master": "UNIR",
+};
+
 const items = await Astro.glob("../../content/education/*.md");
 const sorted = items.sort((a, b) => a.frontmatter.order - b.frontmatter.order);
 ---
@@ -6,8 +22,18 @@ const sorted = items.sort((a, b) => a.frontmatter.order - b.frontmatter.order);
 <div class="mt-1 space-y-2">
   {
     sorted.map((item) => {
-      const { title, school, startDate, endDate, location } = item.frontmatter;
-      const dateRange = endDate ? `${startDate} — ${endDate}` : `${startDate} — Present`;
+      const { school, startDate, endDate } = item.frontmatter;
+      const fileId = item.file.split("/").pop()?.replace(/\.md$/, "") ?? "";
+      const translationKey = TRANSLATION_KEY_BY_FILE[fileId];
+      const title = translationKey
+        ? t(`CURRICULUM.EDUCATION.${translationKey}.TITLE` as any)
+        : item.frontmatter.title;
+      const location = translationKey
+        ? t(`CURRICULUM.EDUCATION.${translationKey}.LOCATION` as any)
+        : item.frontmatter.location;
+      const dateRange = endDate
+        ? `${startDate} — ${endDate}`
+        : `${startDate} — ${t("CURRICULUM.DATE.PRESENT")}`;
       return (
         <div class="flex items-start justify-between gap-4 py-1.5 border-b border-gray-100 last:border-0">
           <div class="min-w-0">

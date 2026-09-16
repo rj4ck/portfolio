@@ -7,10 +7,20 @@ interface Props {
   endDate?: string;
   location: string;
   showTimeline?: boolean;
+  presentLabel?: string;
 }
 
-const { date, title, subtitle, startDate, endDate, location, showTimeline = true } = Astro.props;
-const dateRange = `${startDate}${endDate ? ` — ${endDate}` : " — Present"}`;
+const {
+  date,
+  title,
+  subtitle,
+  startDate,
+  endDate,
+  location,
+  showTimeline = true,
+  presentLabel = "Present",
+} = Astro.props;
+const dateRange = `${startDate}${endDate ? ` — ${endDate}` : ` — ${presentLabel}`}`;
 ---
 
 {

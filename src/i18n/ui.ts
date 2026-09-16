@@ -41,15 +41,15 @@ export const ui = {
     "RECENT_WORKS.CODEX_2.RESULT.3": "Improved team development velocity",
 
     "RECENT_WORKS.CODEX_2.1":
-      "Progressive migration of legacy ASPX views to Vue.js, preserving existing business logic and preventing regressions.",
+      "Migrated 10+ legacy ASPX views to Vue.js as part of an ongoing progressive rollout, preserving existing business logic and preventing regressions.",
     "RECENT_WORKS.CODEX_2.2":
-      "Development of new interfaces with Vue.js and Nuxt.js based on Figma designs and modern tools such as Lovable.",
+      "Built new interfaces with Vue.js and Nuxt.js based on Figma designs, leveraging modern tools such as Lovable.",
     "RECENT_WORKS.CODEX_2.3":
-      "Integration with .NET backend microservices via REST APIs, managing complex states and data flows.",
+      "Integrated .NET backend microservices via REST APIs, managing complex states and data flows.",
     "RECENT_WORKS.CODEX_2.4":
-      "Refactoring and maintenance of legacy modules to ensure stability throughout the migration process.",
+      "Refactored and maintained legacy modules to ensure stability throughout the migration process.",
     "RECENT_WORKS.CODEX_2.5":
-      "Implementation of reusable component architecture to improve maintainability and development velocity.",
+      "Implemented a reusable component architecture to improve maintainability and development velocity.",
 
     "RECENT_WORKS.CODEX.CONTEXT":
       "Development of web and mobile applications alongside deployment on cloud infrastructure.",
@@ -63,25 +63,25 @@ export const ui = {
     "RECENT_WORKS.CODEX.RESULT.3": "More scalable and automated cloud infrastructure",
 
     "RECENT_WORKS.CODEX.1":
-      "Migration of native mobile applications (Android/iOS) to React Native, unifying the codebase and reducing maintenance overhead.",
+      "Migrated native mobile applications (Android/iOS) to React Native, unifying the codebase and reducing maintenance overhead.",
     "RECENT_WORKS.CODEX.2":
-      "Implementation of CI/CD pipelines with GitHub Actions to automate deployments.",
+      "Implemented CI/CD pipelines with GitHub Actions to automate deployments.",
     "RECENT_WORKS.CODEX.3":
-      "Deployment of containerized services using Kubernetes, AWS ECS, and ECR.",
+      "Deployed containerized services using Kubernetes, AWS ECS, and ECR.",
     "RECENT_WORKS.CODEX.4":
-      "Development of microservices with AWS Lambda and API Gateway.",
+      "Developed microservices with AWS Lambda and API Gateway.",
     "RECENT_WORKS.CODEX.5":
-      "Backend implementation with Node.js (NestJS) and Python for business logic.",
+      "Implemented backend business logic with Node.js (NestJS) and Python.",
 
     "RECENT_WORKS.CLINPAYS.CONTEXT":
-      "Development of Paygate, a national payment gateway integrated with multiple banks and electronic wallets in Honduras.",
+      "Development of Paygate, a national payment gateway integrated with 6 banks and 2 e-wallet providers in Honduras.",
     "RECENT_WORKS.CLINPAYS.ROLE":
-      "Led the development team, coordinating new feature implementation aligned with strategic business objectives.",
+      "Led a 3-person development team, coordinating new feature implementation aligned with strategic business objectives.",
 
     "RECENT_WORKS.CLINPAYS.1":
-      "Designed and implemented a payments orchestrator that dynamically routes transactions to the optimal bank or provider based on card BIN and commission rates.",
+      "Designed and implemented a payments orchestrator that dynamically routed daily transaction volume to the optimal bank or provider based on card BIN and commission rates.",
     "RECENT_WORKS.CLINPAYS.2":
-      "Integrated multiple financial entities in Honduras, enabling real-time payment processing and automated account reconciliation.",
+      "Integrated 6 banks and 2 e-wallet providers in Honduras, enabling real-time payment processing and automated account reconciliation.",
     "RECENT_WORKS.CLINPAYS.3":
       "Implemented KYC and 3DS authentication flows with Banco BAC Honduras, meeting regulatory and security compliance requirements.",
     "RECENT_WORKS.CLINPAYS.4":
@@ -113,16 +113,21 @@ export const ui = {
     "CURRICULUM.LANGUAGES.INTERMEDIATE": "Intermediate",
     "CURRICULUM.LANGUAGES.ES": "Spanish",
     "CURRICULUM.LANGUAGES.EN": "English",
+    "CURRICULUM.ROLE": "Full Stack Developer",
+    "CURRICULUM.DATE.PRESENT": "Present",
     "CURRICULUM.EXPERIENCE.TITLE": "Experience",
+    "CURRICULUM.EXPERIENCE.CODEX_2.TITLE": "Software Engineer 2",
     "CURRICULUM.EXPERIENCE.CODEX.TITLE": "Software Developer",
+    "CURRICULUM.EXPERIENCE.CLINPAYS.TITLE": "FullStack Developer / Tech Lead",
     "CURRICULUM.EDUCATION.TITLE": "Education",
     "CURRICULUM.EDUCATION.SEDA.TITLE": "General English - Intermediate",
     "CURRICULUM.EDUCATION.SEDA.LOCATION": "Dublin, Ireland",
-    "CURRICULUM.EDUCATION.UNIR.TITLE": "Design and Project Management",
+    "CURRICULUM.EDUCATION.UNIR.TITLE": "Master in Design and Project Management",
     "CURRICULUM.EDUCATION.UNIR.LOCATION": "La Rioja, Spain",
     "CURRICULUM.EDUCATION.EADIC.TITLE": "Master in Big Data and Applied Artificial Intelligence",
     "CURRICULUM.EDUCATION.EADIC.LOCATION": "Madrid, Spain",
     "CURRICULUM.EDUCATION.UJN.TITLE": "Industrial and Systems Engineering",
+    "CURRICULUM.EDUCATION.UJN.LOCATION": "San Pedro Sula, Honduras",
   },
   es: {
     "HERO.MY_GREETING": "Hola! 👋",
@@ -159,15 +164,15 @@ export const ui = {
     "RECENT_WORKS.CODEX_2.RESULT.3": "Mayor velocidad de desarrollo del equipo",
 
     "RECENT_WORKS.CODEX_2.1":
-      "Migración progresiva de vistas ASPX legacy a Vue.js, preservando la lógica de negocio existente y previniendo regresiones.",
+      "Migré más de 10 vistas ASPX legacy a Vue.js como parte de un rollout progresivo en curso, preservando la lógica de negocio existente y previniendo regresiones.",
     "RECENT_WORKS.CODEX_2.2":
-      "Desarrollo de nuevas interfaces con Vue.js y Nuxt.js basadas en diseños de Figma y herramientas modernas como Lovable.",
+      "Desarrollé nuevas interfaces con Vue.js y Nuxt.js basadas en diseños de Figma, aprovechando herramientas modernas como Lovable.",
     "RECENT_WORKS.CODEX_2.3":
-      "Integración con microservicios backend .NET a través de REST APIs, gestionando estados complejos y flujos de datos.",
+      "Integré microservicios backend .NET a través de REST APIs, gestionando estados complejos y flujos de datos.",
     "RECENT_WORKS.CODEX_2.4":
-      "Refactorización y mantenimiento de módulos legacy para garantizar estabilidad durante el proceso de migración.",
+      "Refactoricé y mantuve módulos legacy para garantizar estabilidad durante el proceso de migración.",
     "RECENT_WORKS.CODEX_2.5":
-      "Implementación de arquitectura de componentes reutilizables para mejorar la mantenibilidad y velocidad de desarrollo.",
+      "Implementé una arquitectura de componentes reutilizables para mejorar la mantenibilidad y velocidad de desarrollo.",
 
     "RECENT_WORKS.CODEX.CONTEXT":
       "Desarrollo de aplicaciones web y móviles junto con despliegue en infraestructura cloud.",
@@ -181,25 +186,25 @@ export const ui = {
     "RECENT_WORKS.CODEX.RESULT.3": "Infraestructura cloud más escalable y automatizada",
 
     "RECENT_WORKS.CODEX.1":
-      "Migración de aplicaciones móviles nativas (Android/iOS) a React Native, unificando la base de código y reduciendo la carga de mantenimiento.",
+      "Migré aplicaciones móviles nativas (Android/iOS) a React Native, unificando la base de código y reduciendo la carga de mantenimiento.",
     "RECENT_WORKS.CODEX.2":
-      "Implementación de pipelines CI/CD con GitHub Actions para automatizar despliegues.",
+      "Implementé pipelines CI/CD con GitHub Actions para automatizar despliegues.",
     "RECENT_WORKS.CODEX.3":
-      "Despliegue de servicios en contenedores usando Kubernetes, AWS ECS y ECR.",
+      "Desplegué servicios en contenedores usando Kubernetes, AWS ECS y ECR.",
     "RECENT_WORKS.CODEX.4":
-      "Desarrollo de microservicios con AWS Lambda y API Gateway.",
+      "Desarrollé microservicios con AWS Lambda y API Gateway.",
     "RECENT_WORKS.CODEX.5":
-      "Implementación backend con Node.js (NestJS) y Python para lógica de negocio.",
+      "Implementé lógica de negocio backend con Node.js (NestJS) y Python.",
 
     "RECENT_WORKS.CLINPAYS.CONTEXT":
-      "Desarrollo de Paygate, una pasarela de pagos nacional integrada con múltiples bancos y billeteras electrónicas en Honduras.",
+      "Desarrollo de Paygate, una pasarela de pagos nacional integrada con 6 bancos y 2 billeteras electrónicas en Honduras.",
     "RECENT_WORKS.CLINPAYS.ROLE":
-      "Lideré el equipo de desarrollo, coordinando la implementación de nuevas funcionalidades alineadas con los objetivos estratégicos del negocio.",
+      "Lideré un equipo de desarrollo de 3 personas, coordinando la implementación de nuevas funcionalidades alineadas con los objetivos estratégicos del negocio.",
 
     "RECENT_WORKS.CLINPAYS.1":
-      "Diseñé e implementé un orquestador de pagos capaz de seleccionar dinámicamente el banco o proveedor basado en el BIN de la tarjeta y las comisiones.",
+      "Diseñé e implementé un orquestador de pagos que enrutaba dinámicamente el volumen diario de transacciones al banco o proveedor óptimo según el BIN de la tarjeta y las comisiones.",
     "RECENT_WORKS.CLINPAYS.2":
-      "Integré múltiples entidades financieras en Honduras, habilitando el procesamiento de pagos en tiempo real y la conciliación automática de cuentas.",
+      "Integré 6 bancos y 2 billeteras electrónicas en Honduras, habilitando el procesamiento de pagos en tiempo real y la conciliación automática de cuentas.",
     "RECENT_WORKS.CLINPAYS.3":
       "Implementé flujos de autenticación KYC y 3DS en conjunto con Banco BAC Honduras, cumpliendo los requisitos regulatorios y de seguridad.",
     "RECENT_WORKS.CLINPAYS.4":
@@ -230,13 +235,21 @@ export const ui = {
     "CURRICULUM.LANGUAGES.NATIVE": "Nativo",
     "CURRICULUM.LANGUAGES.INTERMEDIATE": "Intermedio",
     "CURRICULUM.LANGUAGES.ES": "Español",
-    "CURRICULUM.LANGUAGES.EN": "Ingles",
+    "CURRICULUM.LANGUAGES.EN": "Inglés",
+    "CURRICULUM.ROLE": "Desarrolladora Full Stack",
+    "CURRICULUM.DATE.PRESENT": "Presente",
     "CURRICULUM.EXPERIENCE.TITLE": "Experiencia",
+    "CURRICULUM.EXPERIENCE.CODEX_2.TITLE": "Ingeniera de Software 2",
+    "CURRICULUM.EXPERIENCE.CODEX.TITLE": "Desarrolladora de Software",
+    "CURRICULUM.EXPERIENCE.CLINPAYS.TITLE": "Desarrolladora FullStack / Líder Técnica",
     "CURRICULUM.EDUCATION.TITLE": "Educación",
     "CURRICULUM.EDUCATION.SEDA.TITLE": "Inglés General - Intermedio",
     "CURRICULUM.EDUCATION.SEDA.LOCATION": "Dublín, Irlanda",
-    "CURRICULUM.EDUCATION.UNIR.TITLE": "Diseño y Gestión de Proyectos",
+    "CURRICULUM.EDUCATION.UNIR.TITLE": "Máster en Diseño y Gestión de Proyectos",
     "CURRICULUM.EDUCATION.UNIR.LOCATION": "La Rioja, España",
+    "CURRICULUM.EDUCATION.EADIC.TITLE": "Máster en Big Data e Inteligencia Artificial Aplicada",
+    "CURRICULUM.EDUCATION.EADIC.LOCATION": "Madrid, España",
     "CURRICULUM.EDUCATION.UJN.TITLE": "Ingeniería Industrial y de Sistemas",
+    "CURRICULUM.EDUCATION.UJN.LOCATION": "San Pedro Sula, Honduras",
   },
 } as const;

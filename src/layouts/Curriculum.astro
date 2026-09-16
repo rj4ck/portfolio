@@ -11,7 +11,7 @@ const t = useTranslations(lang as "en" | "es");
 <!doctype html>
 <html lang={lang}>
   <BaseHead
-    title={`${t("CURRICULUM.TITLE")} — Raquel Jackson`}
+    title={`Raquel Jackson - ${t("CURRICULUM.TITLE")}`}
     description={lang === "es"
       ? "Hoja de vida de Raquel Jackson — Desarrolladora Full Stack con experiencia en ReactJS, VueJS, AWS y sistemas de pago."
       : "Curriculum Vitae of Raquel Jackson — Full Stack Developer with experience in ReactJS, VueJS, AWS and payment systems."}
@@ -28,7 +28,7 @@ const t = useTranslations(lang as "en" | "es");
   @media print {
     @page {
       size: letter portrait;
-      margin: 0.4in 0.5in;
+      margin: 0.3in 0.45in;
     }
 
     body {
@@ -42,27 +42,53 @@ const t = useTranslations(lang as "en" | "es");
       width: 100% !important;
     }
 
-    /* Section gaps */
-    .mb-4  { margin-bottom: 5pt !important; }
-    .my-4  { margin-top: 3pt !important; margin-bottom: 3pt !important; }
-    .mt-2  { margin-top: 3pt !important; }
-    .gap-2 { gap: 3pt !important; }
+    /* Container padding (the @page margin already provides the gutter) */
+    .px-10 { padding-left: 0 !important; padding-right: 0 !important; }
+    .py-8  { padding-top: 0 !important; padding-bottom: 0 !important; }
 
-    /* Experience list spacing */
-    .space-y-6 > * + * { margin-top: 7pt !important; }
-    .space-y-1 > * + * { margin-top: 1pt !important; }
+    /* Heading sizes */
+    .text-3xl { font-size: 18pt !important; line-height: 1.15 !important; }
+    .text-xl   { font-size: 11pt !important; line-height: 1.2 !important; }
+    .text-sm   { font-size: 8pt !important; line-height: 1.35 !important; }
+    .text-xs   { font-size: 7.25pt !important; line-height: 1.35 !important; }
+    .text-\[10px\] { font-size: 7pt !important; }
+    .text-\[11px\] { font-size: 7.75pt !important; }
 
-    /* Font sizes */
-    .text-4xl { font-size: 20pt !important; line-height: 1.2 !important; }
-    .text-xl   { font-size: 11pt !important; line-height: 1.3 !important; }
-    .text-sm   { font-size: 8.5pt !important; line-height: 1.4 !important; }
-    .text-xs   { font-size: 7.5pt !important; line-height: 1.4 !important; }
+    /* Section / element gaps */
+    .mb-5    { margin-bottom: 6pt !important; }
+    .mb-4    { margin-bottom: 4.5pt !important; }
+    .mb-3    { margin-bottom: 3pt !important; }
+    .mb-1\.5 { margin-bottom: 2pt !important; }
+    .my-4    { margin-top: 2.5pt !important; margin-bottom: 2.5pt !important; }
+    .my-3    { margin-top: 2.5pt !important; margin-bottom: 2.5pt !important; }
+    .mt-2    { margin-top: 2.5pt !important; }
+    .mt-1    { margin-top: 2pt !important; }
+    .mt-0\.5 { margin-top: 1pt !important; }
+    .gap-2   { gap: 3pt !important; }
+    .gap-6   { gap: 8pt !important; }
+    .gap-x-8, .gap-x-10 { column-gap: 8pt !important; }
+    .gap-y-1 { row-gap: 1.5pt !important; }
+    .gap-y-3 { row-gap: 3pt !important; }
+
+    /* List / entry spacing */
+    .space-y-6 > * + *   { margin-top: 6pt !important; }
+    .space-y-4 > * + *   { margin-top: 5pt !important; }
+    .space-y-2 > * + *   { margin-top: 2.5pt !important; }
+    .space-y-1 > * + *   { margin-top: 0.75pt !important; }
+    .space-y-0\.5 > * + * { margin-top: 0.75pt !important; }
+
+    /* Line-height compression */
+    .leading-relaxed { line-height: 1.3 !important; }
+    .leading-snug     { line-height: 1.15 !important; }
 
     /* Padding compression */
     .p-2      { padding: 2pt !important; }
     .py-2     { padding-top: 2pt !important; padding-bottom: 2pt !important; }
     .py-1\.5  { padding-top: 1pt !important; padding-bottom: 1pt !important; }
+    .py-0\.5  { padding-top: 0.5pt !important; padding-bottom: 0.5pt !important; }
+    .px-1\.5  { padding-left: 3pt !important; padding-right: 3pt !important; }
     .ml-6     { margin-left: 0.8rem !important; }
+    .ml-4, .ml-5 { margin-left: 9pt !important; }
 
     /* Borders */
     .border-gray-700 { border-color: #d1d5db !important; }

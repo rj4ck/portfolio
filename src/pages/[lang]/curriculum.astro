@@ -19,37 +19,50 @@ const t = useTranslations(lang as "en" | "es");
   <div class="bg-white w-[8.5in] h-fit max-w-full mx-auto px-10 py-8">
     <header class="mb-5">
       <h1 class="text-3xl font-bold tracking-tight text-gray-900">Raquel Jackson</h1>
-      <p class="text-sm font-medium text-orange-500 mt-0.5">Full Stack Developer</p>
+      <p class="text-sm font-medium text-orange-500 mt-0.5">{t("CURRICULUM.ROLE")}</p>
 
       <div class="border-b border-gray-200 my-3"></div>
 
       <div class="grid grid-cols-2 gap-x-8 gap-y-1">
         <p class="flex items-center gap-2 text-xs text-gray-600">
-          <i class="fa fa-location-dot text-orange-400 w-3 text-center"></i>
+          <svg viewBox="0 0 24 24" fill="currentColor" class="text-orange-400 w-3 h-3 shrink-0" aria-hidden="true">
+            <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+          </svg>
           San Pedro Sula, Honduras
         </p>
         <p class="flex items-center gap-2 text-xs text-gray-600">
-          <i class="fa fa-brands fa-linkedin text-orange-400 w-3 text-center"></i>
+          <svg viewBox="0 0 24 24" fill="currentColor" class="text-orange-400 w-3 h-3 shrink-0" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 110-4.124 2.062 2.062 0 010 4.124zM7.114 20.452H3.558V9h3.556v11.452z"></path>
+          </svg>
           <a href="https://linkedin.com/in/raquel-jackson" target="_blank" class="hover:text-orange-500 transition-colors">
             linkedin.com/in/raquel-jackson
           </a>
         </p>
         <p class="flex items-center gap-2 text-xs text-gray-600">
-          <i class="fa fa-phone text-orange-400 w-3 text-center"></i>
+          <svg viewBox="0 0 24 24" fill="currentColor" class="text-orange-400 w-3 h-3 shrink-0" aria-hidden="true">
+            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"></path>
+          </svg>
           (+504) 3146-1429
         </p>
         <p class="flex items-center gap-2 text-xs text-gray-600">
-          <i class="fa fa-brands fa-github text-orange-400 w-3 text-center"></i>
+          <svg viewBox="0 0 24 24" fill="currentColor" class="text-orange-400 w-3 h-3 shrink-0" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 016 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+          </svg>
           <a href="https://github.com/rj4ck" target="_blank" class="hover:text-orange-500 transition-colors">
             github.com/rj4ck
           </a>
         </p>
         <p class="flex items-center gap-2 text-xs text-gray-600">
-          <i class="fa fa-envelope text-orange-400 w-3 text-center"></i>
+          <svg viewBox="0 0 24 24" fill="currentColor" class="text-orange-400 w-3 h-3 shrink-0" aria-hidden="true">
+            <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a3.25 3.25 0 002.918 0L21 7.162V6a2 2 0 00-2-2H3z"></path>
+            <path d="M21 8.839l-7.77 3.885a4.75 4.75 0 01-4.46 0L1 8.839V16a2 2 0 002 2h16a2 2 0 002-2V8.839z"></path>
+          </svg>
           r.jackson@msn.com
         </p>
         <p class="flex items-center gap-2 text-xs text-gray-600">
-          <i class="fa fa-globe text-orange-400 w-3 text-center"></i>
+          <svg viewBox="0 0 24 24" fill="currentColor" class="text-orange-400 w-3 h-3 shrink-0" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.31 6.844a8.242 8.242 0 011.653-1.238 6.72 6.72 0 00-.437 1.42c-.11.542-.183 1.148-.222 1.788H4.33c.147-.769.42-1.393.749-1.977a8.28 8.28 0 011.23.007zM4.33 12.75h2.974c.039.64.112 1.246.222 1.788a6.722 6.722 0 00.437 1.42 8.24 8.24 0 01-1.653-1.238 8.28 8.28 0 01-1.98-1.97zm1.98-6.22c.502-.503 1.06-.94 1.663-1.302a8.34 8.34 0 00-.65 1.3c.264-.024.526-.037.79-.037v.038h-1.803zm3.18-1.802a6.66 6.66 0 00-.89 1.874c-.15.494-.266 1.026-.35 1.55h2.5v-3.52a6.6 6.6 0 00-1.26.096zM12.75 4.802v3.52h2.5a8.41 8.41 0 00-.35-1.55 6.66 6.66 0 00-.89-1.874 6.6 6.6 0 00-1.26-.096zM17.34 8.322c-.039-.64-.112-1.246-.222-1.788a6.722 6.722 0 00-.437-1.42 8.242 8.242 0 011.653 1.238 8.28 8.28 0 011.98 1.97h-2.974zm2.974 4.428a8.28 8.28 0 01-1.98 1.97 8.242 8.242 0 01-1.653 1.238c.184-.45.331-.928.437-1.42.11-.542.183-1.148.222-1.788h2.974zm-6.564 5.448a6.6 6.6 0 001.26-.096 6.66 6.66 0 00.89-1.874c.15-.494.266-1.026.35-1.55h-2.5v3.52zm-1.5 0v-3.52h-2.5c.084.524.2 1.056.35 1.55a6.66 6.66 0 00.89 1.874 6.6 6.6 0 001.26.096zm-3.804-1.428a6.72 6.72 0 01-.437-1.42 12.78 12.78 0 01-.222-1.788H4.33a8.28 8.28 0 001.98 1.97 8.242 8.242 0 001.653 1.238h.483zm-.483-11.62H4.33a8.28 8.28 0 001.98-1.97 8.242 8.242 0 001.653-1.238 6.72 6.72 0 00-.437 1.42c-.11.542-.183 1.148-.222 1.788zm8.804 4.6h-2.974c.039.64.112 1.246.222 1.788.106.492.253.97.437 1.42h.483a8.242 8.242 0 001.653-1.238 8.28 8.28 0 001.98-1.97h-1.801zm-2.974-1.5h2.974a8.28 8.28 0 00-1.98-1.97 8.242 8.242 0 00-1.653-1.238 6.72 6.72 0 01.437 1.42c.11.542.183 1.148.222 1.788z" clip-rule="evenodd"></path>
+          </svg>
           <a href="https://rj4ck.github.io/portfolio" target="_blank" class="hover:text-orange-500 transition-colors">
             rj4ck.github.io/portfolio
           </a>
@@ -71,7 +84,8 @@ const t = useTranslations(lang as "en" | "es");
             location={"Austin, Texas"}
             date={"Oct 2024"}
             title={"Code ÉXITOS"}
-            subtitle={"Software Engineer 2"}
+            subtitle={t("CURRICULUM.EXPERIENCE.CODEX_2.TITLE")}
+            presentLabel={t("CURRICULUM.DATE.PRESENT")}
           >
             <ProjectList
               showTimeline={false}
@@ -95,7 +109,7 @@ const t = useTranslations(lang as "en" | "es");
             location={"San Pedro Sula, Honduras"}
             date={"Feb 2022"}
             title={"Code ÉXITOS"}
-            subtitle={"Software Developer"}
+            subtitle={t("CURRICULUM.EXPERIENCE.CODEX.TITLE")}
           >
             <ProjectList
               showTimeline={false}
@@ -119,7 +133,7 @@ const t = useTranslations(lang as "en" | "es");
             location={"San Pedro Sula, Honduras"}
             date={"Nov 2014"}
             title={"Clinpays"}
-            subtitle={"FullStack Developer / Tech Lead"}
+            subtitle={t("CURRICULUM.EXPERIENCE.CLINPAYS.TITLE")}
           >
             <ProjectList
               showTimeline={false}
@@ -138,11 +152,11 @@ const t = useTranslations(lang as "en" | "es");
     </CurriculumSection>
 
     <CurriculumSection title={t("CURRICULUM.SKILLS.TITLE")}>
-      <Skills />
+      <Skills lang={lang as "en" | "es"} />
     </CurriculumSection>
 
     <CurriculumSection title={t("CURRICULUM.EDUCATION.TITLE")}>
-      <Education />
+      <Education lang={lang as "en" | "es"} />
     </CurriculumSection>
 
     <CurriculumSection title={t("CURRICULUM.LANGUAGES.TITLE")}>

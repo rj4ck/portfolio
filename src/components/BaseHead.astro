@@ -11,13 +11,14 @@ const { title, description, lang = "en" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(`${import.meta.env.BASE_URL}og-image.jpg`, Astro.site);
 const ogLocale = lang === "es" ? "es_HN" : "en_US";
+const jobTitle = lang === "es" ? "Desarrolladora Full Stack" : "Full Stack Developer";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Raquel Jackson",
   url: Astro.site?.toString(),
-  jobTitle: "Full Stack Developer",
+  jobTitle,
   sameAs: [
     "https://linkedin.com/in/raquel-jackson",
     "https://github.com/rj4ck",
@@ -52,7 +53,7 @@ const jsonLd = {
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="800" />
   <meta property="og:image:height" content="800" />
-  <meta property="og:image:alt" content="Raquel Jackson — Full Stack Developer" />
+  <meta property="og:image:alt" content={`Raquel Jackson — ${jobTitle}`} />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />

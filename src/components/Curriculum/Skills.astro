@@ -1,19 +1,39 @@
 ---
+import { useTranslations } from "../../i18n/utils";
+
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang = "en" } = Astro.props;
+const t = useTranslations(lang);
+
+const CATEGORY_TRANSLATION_KEY: Record<string, string> = {
+  Frontend: "SKILLS.CATEGORY.FRONTEND",
+  Backend: "SKILLS.CATEGORY.BACKEND",
+  Databases: "SKILLS.CATEGORY.DATABASES",
+  Others: "SKILLS.CATEGORY.OTHERS",
+};
+
 const categories = await Astro.glob("../../content/technical-skills/*.md");
 const sorted = categories.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 ---
 
 <div class="grid grid-cols-2 gap-x-10 gap-y-3 mt-2">
   {
-    sorted.map((cat) => (
-      <div>
-        <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-orange-500 mb-1">
-          {cat.frontmatter.title}
-        </p>
-        <p class="text-[11px] text-gray-600 leading-relaxed">
-          {cat.frontmatter.skills.map((s: { title: string }) => s.title).join(" · ")}
-        </p>
-      </div>
-    ))
+    sorted.map((cat) => {
+      const translationKey = CATEGORY_TRANSLATION_KEY[cat.frontmatter.title];
+      const label = translationKey ? t(translationKey as any) : cat.frontmatter.title;
+      return (
+        <div>
+          <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-orange-500 mb-1">
+            {label}
+          </p>
+          <p class="text-[11px] text-gray-600 leading-relaxed">
+            {cat.frontmatter.skills.map((s: { title: string }) => s.title).join(" · ")}
+          </p>
+        </div>
+      );
+    })
   }
 </div>
