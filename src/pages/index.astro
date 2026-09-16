@@ -1,5 +1,6 @@
 ---
-
+const target = `${import.meta.env.BASE_URL}en/`;
+const canonicalURL = new URL(target, Astro.site);
 ---
 
 <!doctype html>
@@ -7,11 +8,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirection Page</title>
+    <title>Raquel Jackson - Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Full Stack Developer specialized in JavaScript — ReactJS, VueJS, NuxtJS, AWS and payment systems."
+    />
+    <link rel="canonical" href={canonicalURL} />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
   </head>
   <body>
-    <script>
-      window.location.href = "en";
+    <script define:vars={{ target }}>
+      window.location.href = target;
     </script>
   </body>
 </html>

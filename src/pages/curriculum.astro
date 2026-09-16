@@ -1,5 +1,6 @@
 ---
-
+const target = `${import.meta.env.BASE_URL}en/curriculum/`;
+const canonicalURL = new URL(target, Astro.site);
 ---
 
 <!doctype html>
@@ -7,12 +8,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirection Page</title>
+    <title>Raquel Jackson - Curriculum Vitae</title>
+    <meta
+      name="description"
+      content="Curriculum Vitae of Raquel Jackson — Full Stack Developer with experience in ReactJS, VueJS, AWS and payment systems."
+    />
+    <link rel="canonical" href={canonicalURL} />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
   </head>
   <body>
-    <script>
-      // Redirige a la página 'en/curriculum'
-      window.location.href = "en/curriculum";
+    <script define:vars={{ target }}>
+      window.location.href = target;
     </script>
   </body>
 </html>

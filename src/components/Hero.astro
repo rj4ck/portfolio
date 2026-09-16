@@ -22,15 +22,15 @@ const t = useTranslations(lang as "en" | "es");
         height="900"
         loading="lazy"
         decoding="async"
-        alt={"Avatar"}
+        alt={t("HERO.AVATAR_ALT")}
         src={optimizedAvatar.src}
       />
     </div>
 
-    <p class="text-4xl">
+    <h1 class="text-4xl">
       {t("HERO.MY_NAME")}
       <span class="animated-gradient">Raquel Jackson</span>
-    </p>
+    </h1>
   </div>
 
   <div class="mb-8 mx-auto max-w-lg">
